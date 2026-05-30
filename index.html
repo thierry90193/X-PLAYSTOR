@@ -1,320 +1,197 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>X-PLAYSTOR</title>
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Segoe UI,sans-serif;
-}
-
 body{
-background:#050510;
+margin:0;
+font-family:Arial, sans-serif;
+background:#0b0b14;
 color:white;
 display:flex;
-height:100vh;
-overflow:hidden;
 }
 
-.sidebar{
-width:240px;
-background:#090914;
-padding:20px;
-border-right:1px solid #222;
-}
-
-.logo{
-font-size:32px;
-font-weight:bold;
-color:#b026ff;
-text-align:center;
-margin-bottom:25px;
-text-shadow:0 0 15px #b026ff;
-}
-
-.menu button{
-width:100%;
-padding:12px;
-margin-bottom:10px;
-background:#141425;
-color:white;
-border:none;
-border-radius:10px;
-cursor:pointer;
-}
-
-.menu button:hover{
-background:#b026ff;
-}
-
+/* CONTEÚDO PRINCIPAL */
 .main{
-flex:1;
-overflow:auto;
-}
-
-.topbar{
-background:#090914;
-padding:15px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
-
-.search{
-width:400px;
-padding:12px;
-background:#141425;
-border:none;
-border-radius:10px;
-color:white;
-}
-
-.coins{
-background:#141425;
-padding:10px 15px;
-border-radius:10px;
-}
-
-.content{
+flex:3;
 padding:20px;
 }
 
-.hero{
-background:linear-gradient(135deg,#1c0535,#b026ff);
-padding:50px;
-border-radius:20px;
-margin-bottom:20px;
+/* SIDEBAR AMIGOS */
+.rightbar{
+flex:1;
+background:#0f0f1a;
+padding:20px;
+border-left:1px solid #222;
+min-height:100vh;
 }
 
-.hero h1{
-font-size:55px;
-}
-
-.hero button{
-margin-top:15px;
-padding:12px 25px;
-background:white;
-border:none;
+.friend{
+background:#141425;
+padding:12px;
 border-radius:10px;
-cursor:pointer;
+margin-bottom:10px;
+border-left:4px solid #b026ff;
 }
 
+/* CARDS */
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:15px;
+margin-bottom:30px;
 }
 
 .card{
 background:#101020;
 padding:20px;
 border-radius:15px;
+transition:.3s;
 }
 
-.rightbar{
-width:240px;
-background:#090914;
-padding:20px;
-border-left:1px solid #222;
+.card:hover{
+transform:translateY(-5px);
+box-shadow:0 0 20px rgba(176,38,255,.5);
 }
 
-.friend{
-background:#141425;
-padding:10px;
+.card img{
+width:100%;
 border-radius:10px;
 margin-bottom:10px;
 }
 
-.page{
-display:none;
+/* HERO */
+.hero{
+background:linear-gradient(135deg,#1c0535,#b026ff);
+padding:50px;
+border-radius:20px;
+margin-bottom:20px;
+box-shadow:0 0 30px rgba(176,38,255,.4);
 }
 
-.active{
-display:block;
+button{
+background:#b026ff;
+border:none;
+padding:12px 18px;
+color:white;
+border-radius:10px;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+background:#8b1ed6;
 }
 </style>
+
 </head>
 
 <body>
 
-<div class="sidebar">
-
-<div class="logo">
-X-PLAYSTOR
-</div>
-
-<div class="menu">
-<button onclick="showPage('home')">🏠 Home</button>
-<button onclick="showPage('loja')">🏪 Loja</button>
-<button onclick="showPage('biblioteca')">📚 Biblioteca</button>
-<button onclick="showPage('perfil')">👤 Perfil</button>
-</div>
-
-</div>
-
+<!-- MAIN -->
 <div class="main">
 
-<div class="topbar">
+<h2>🔥 Promoções da Semana</h2>
 
-<input class="search" placeholder="🔍 Buscar jogos...">
+<div class="cards">
 
-<div class="coins">
-🪙 1.250 X-Coins
+<div class="card">
+<img src="https://picsum.photos/400/220?1">
+<h3>Cyber Runner</h3>
+<p>De R$ 89,90 por</p>
+<h2 style="color:#b026ff;">R$ 39,90</h2>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/400/220?2">
+<h3>Galaxy Wars</h3>
+<p>De R$ 149,90 por</p>
+<h2 style="color:#b026ff;">R$ 69,90</h2>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/400/220?3">
+<h3>Shadow Legacy</h3>
+<p>De R$ 119,90 por</p>
+<h2 style="color:#b026ff;">R$ 59,90</h2>
 </div>
 
 </div>
 
-<div class="content">
+<h2>🚀 Lançamentos</h2>
 
-<!-- HOME -->
+<div class="cards">
 
-<div id="home" class="page active">
+<div class="card">
+<img src="https://picsum.photos/400/220?4">
+<h3>Neon City</h3>
+<p>Disponível agora</p>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/400/220?5">
+<h3>Future Combat</h3>
+<p>Disponível agora</p>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/400/220?6">
+<h3>Dark Universe</h3>
+<p>Disponível agora</p>
+</div>
+
+</div>
 
 <div class="hero">
-<h1>X-PLAYSTOR</h1>
-<p>Jogos selecionados pela equipe X-PLAYSTOR.</p>
-<button>Explorar Loja</button>
+<h1>🏆 Seleção X-PLAYSTOR</h1>
+<p>Apenas jogos aprovados pela equipe entram no catálogo oficial.</p>
+<button>Solicitar Avaliação de Jogos</button>
 </div>
 
-<h2>🔥 Destaques</h2>
+<div class="hero">
+<h1>💎 X-PLAY PASS</h1>
+<p>Tenha acesso a promoções exclusivas e benefícios especiais.</p>
+<button>Assinar Agora</button>
+</div>
+
+<h2>📰 Notícias</h2>
 
 <div class="cards">
 
 <div class="card">
-<h3>Jogo em Destaque</h3>
-<p>R$ 89,90</p>
+<h3>Nova atualização da plataforma</h3>
+<p>Melhorias de desempenho e interface.</p>
 </div>
 
 <div class="card">
-<h3>Mais Vendido</h3>
-<p>R$ 129,90</p>
+<h3>X-Coins chegando</h3>
+<p>Em breve sistema completo de moedas.</p>
 </div>
 
 <div class="card">
-<h3>Novo Lançamento</h3>
-<p>R$ 59,90</p>
+<h3>Novos recursos sociais</h3>
+<p>Sistema de amigos em desenvolvimento.</p>
 </div>
 
 </div>
 
 </div>
 
-<!-- LOJA -->
-
-<div id="loja" class="page">
-
-<h1>🏪 Loja</h1>
-
-<div class="cards">
-
-<div class="card">
-<h3>Cyber Game</h3>
-<p>⭐⭐⭐⭐⭐</p>
-<p>R$ 49,90</p>
-</div>
-
-<div class="card">
-<h3>Shadow Runner</h3>
-<p>⭐⭐⭐⭐</p>
-<p>R$ 89,90</p>
-</div>
-
-<div class="card">
-<h3>Galaxy Wars</h3>
-<p>⭐⭐⭐⭐⭐</p>
-<p>R$ 149,90</p>
-</div>
-
-</div>
-
-</div>
-
-<!-- BIBLIOTECA -->
-
-<div id="biblioteca" class="page">
-
-<h1>📚 Minha Biblioteca</h1>
-
-<div class="cards">
-
-<div class="card">
-<h3>Minecraft</h3>
-<button>Jogar</button>
-</div>
-
-<div class="card">
-<h3>GTA V</h3>
-<button>Jogar</button>
-</div>
-
-<div class="card">
-<h3>Cyberpunk</h3>
-<button>Instalar</button>
-</div>
-
-</div>
-
-</div>
-
-<!-- PERFIL -->
-
-<div id="perfil" class="page">
-
-<h1>👤 Perfil</h1>
-
-<div class="card">
-
-<h2>ThierryXP</h2>
-
-<p>🎮 Jogos: 25</p>
-<p>🏆 Conquistas: 120</p>
-<p>👥 Amigos: 50</p>
-<p>⭐ Nível: 15</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
+<!-- RIGHT BAR -->
 <div class="rightbar">
 
-<h2>👥 Amigos</h2>
+<h2>👥 Lista de Amigos</h2>
 
-<div class="friend">
-🟢 João
-</div>
-
-<div class="friend">
-🟢 Maria
-</div>
-
-<div class="friend">
-🔴 Pedro
-</div>
+<div class="friend">🟢 João<br><small>Online</small></div>
+<div class="friend">🟢 Maria<br><small>Jogando</small></div>
+<div class="friend">🟡 Lucas<br><small>Ausente</small></div>
+<div class="friend">🔴 Pedro<br><small>Offline</small></div>
+<div class="friend">🟢 Ana<br><small>Jogando</small></div>
 
 </div>
-
-<script>
-
-function showPage(page){
-
-document.querySelectorAll('.page')
-.forEach(p=>p.classList.remove('active'));
-
-document.getElementById(page)
-.classList.add('active');
-
-}
-
-</script>
 
 </body>
 </html>
