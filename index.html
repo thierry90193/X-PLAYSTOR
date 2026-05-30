@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>X-PLAYSTOR</title>
 
 <style>
@@ -12,27 +11,28 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Segoe UI',sans-serif;
+font-family:Segoe UI,sans-serif;
 }
 
 body{
 background:#050510;
 color:white;
 display:flex;
-min-height:100vh;
 }
 
 .sidebar{
-width:280px;
-background:#080812;
-padding:30px;
-border-right:1px solid rgba(255,255,255,.05);
+width:260px;
+background:#090914;
+padding:25px;
+height:100vh;
 position:fixed;
-height:100%;
+left:0;
+top:0;
+border-right:1px solid rgba(255,255,255,.05);
 }
 
 .logo{
-font-size:60px;
+font-size:55px;
 font-weight:bold;
 text-align:center;
 color:#b026ff;
@@ -41,23 +41,23 @@ text-shadow:0 0 25px #b026ff;
 
 .slogan{
 text-align:center;
-margin-top:15px;
+margin-top:10px;
 color:#aaa;
-font-size:14px;
+font-size:13px;
 }
 
 .menu{
-margin-top:50px;
+margin-top:40px;
 display:flex;
 flex-direction:column;
-gap:15px;
+gap:10px;
 }
 
 .menu a{
-color:white;
 text-decoration:none;
-padding:15px;
-border-radius:12px;
+color:white;
+padding:14px;
+border-radius:10px;
 transition:.3s;
 }
 
@@ -66,28 +66,28 @@ background:#b026ff;
 }
 
 .main{
-margin-left:280px;
-width:calc(100% - 280px);
+margin-left:260px;
+width:calc(100% - 260px);
 }
 
 .topbar{
+background:#090914;
+padding:20px 30px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 30px;
-background:#090914;
 }
 
 .search{
 width:450px;
-padding:15px;
+padding:14px;
 background:#141425;
 border:none;
-border-radius:12px;
+border-radius:10px;
 color:white;
 }
 
-.right{
+.user{
 display:flex;
 align-items:center;
 gap:15px;
@@ -95,13 +95,13 @@ gap:15px;
 
 .coins{
 background:#141425;
-padding:12px 18px;
-border-radius:12px;
+padding:10px 15px;
+border-radius:10px;
 }
 
 .avatar{
-width:55px;
-height:55px;
+width:45px;
+height:45px;
 background:#b026ff;
 border-radius:50%;
 display:flex;
@@ -112,8 +112,8 @@ font-weight:bold;
 
 .hero{
 margin:20px;
-height:500px;
-border-radius:25px;
+height:450px;
+border-radius:20px;
 overflow:hidden;
 position:relative;
 background:
@@ -125,8 +125,8 @@ background-position:center;
 
 .hero-content{
 position:absolute;
-left:60px;
-bottom:60px;
+left:50px;
+bottom:50px;
 }
 
 .tag{
@@ -134,34 +134,32 @@ display:inline-block;
 background:#b026ff;
 padding:8px 15px;
 border-radius:20px;
-margin-bottom:20px;
+margin-bottom:15px;
 }
 
 .hero h1{
-font-size:80px;
+font-size:70px;
 }
 
-.hero h1 span{
+.hero span{
 color:#b026ff;
 }
 
 .hero p{
-margin-top:15px;
-font-size:22px;
-max-width:700px;
-color:#ddd;
+font-size:20px;
+margin-top:10px;
+max-width:650px;
 }
 
 .hero button{
-margin-top:25px;
-padding:18px 35px;
+margin-top:20px;
+padding:15px 30px;
 background:#b026ff;
 border:none;
 border-radius:12px;
 color:white;
 cursor:pointer;
-font-size:18px;
-box-shadow:0 0 30px #b026ff;
+box-shadow:0 0 25px #b026ff;
 }
 
 .section{
@@ -169,26 +167,26 @@ padding:20px;
 }
 
 .section h2{
-font-size:40px;
 margin-bottom:20px;
+font-size:35px;
 }
 
 .games{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
 }
 
 .card{
 background:#101020;
-border-radius:20px;
+border-radius:15px;
 overflow:hidden;
 transition:.3s;
 }
 
 .card:hover{
 transform:translateY(-8px);
-box-shadow:0 0 25px rgba(176,38,255,.4);
+box-shadow:0 0 20px rgba(176,38,255,.4);
 }
 
 .card img{
@@ -198,7 +196,7 @@ object-fit:cover;
 }
 
 .info{
-padding:20px;
+padding:15px;
 }
 
 .price{
@@ -209,9 +207,9 @@ font-weight:bold;
 
 .selection{
 margin:20px;
-padding:40px;
-border-radius:25px;
-background:linear-gradient(135deg,#18042e,#45117a);
+padding:35px;
+background:linear-gradient(135deg,#19042f,#49117e);
+border-radius:20px;
 }
 
 .selection h2{
@@ -219,43 +217,32 @@ color:#b026ff;
 margin-bottom:15px;
 }
 
-.selection p{
-font-size:18px;
-line-height:1.7;
-color:#ddd;
-max-width:900px;
-}
-
 .selection button{
-margin-top:25px;
-padding:15px 30px;
+margin-top:20px;
+padding:15px 25px;
 background:#b026ff;
 border:none;
-border-radius:12px;
+border-radius:10px;
 color:white;
 cursor:pointer;
 }
 
 .pass{
 margin:20px;
-padding:40px;
-border-radius:25px;
-background:linear-gradient(135deg,#3c0970,#b026ff);
+padding:35px;
+background:linear-gradient(135deg,#430a77,#b026ff);
+border-radius:20px;
 display:flex;
 justify-content:space-between;
 align-items:center;
 }
 
-.pass h2{
-font-size:45px;
-}
-
 .pass button{
-padding:15px 30px;
+padding:15px 25px;
 border:none;
-border-radius:12px;
-font-weight:bold;
+border-radius:10px;
 cursor:pointer;
+font-weight:bold;
 }
 
 </style>
@@ -276,8 +263,8 @@ JOGOS. DIVERSÃO. SEM LIMITES.
 <a href="#">🔥 Lançamentos</a>
 <a href="#">🎮 Biblioteca</a>
 <a href="#">💎 Ofertas</a>
+<a href="#">👥 Lista de Amigos</a>
 <a href="#">🏆 Conquistas</a>
-<a href="#">👥 Comunidade</a>
 <a href="#">⭐ Favoritos</a>
 <a href="#">⚙️ Configurações</a>
 </div>
@@ -288,9 +275,9 @@ JOGOS. DIVERSÃO. SEM LIMITES.
 
 <div class="topbar">
 
-<input class="search" placeholder="Buscar jogos, DLCs e amigos...">
+<input class="search" placeholder="🔍 Buscar jogos...">
 
-<div class="right">
+<div class="user">
 
 <div class="coins">
 🪙 1.250 X-Coins
@@ -315,7 +302,7 @@ LANÇAMENTO
 <h1>X-PLAY<span>STOR</span></h1>
 
 <p>
-Sua plataforma gamer futurista com jogos selecionados e aprovados pela equipe X-PLAYSTOR.
+Sua plataforma gamer com jogos selecionados pela equipe X-PLAYSTOR.
 </p>
 
 <button>
@@ -328,7 +315,7 @@ Explorar Loja
 
 <section class="section">
 
-<h2>Destaques</h2>
+<h2>🎮 Destaques</h2>
 
 <div class="games">
 
@@ -366,13 +353,50 @@ Explorar Loja
 
 <p>
 Seu jogo pode fazer parte da seleção X-PLAYSTOR.
-Todos os projetos passam por uma análise antes de serem adicionados ao catálogo da plataforma.
-Buscamos qualidade, criatividade e uma ótima experiência para os jogadores.
+Todos os projetos passam por análise antes de serem aprovados para a plataforma.
 </p>
 
 <button>
-Solicitar Avaliação
+Solicitar Avaliação de Jogos
 </button>
+
+</section>
+
+<section class="section">
+
+<h2>👥 Lista de Amigos</h2>
+
+<div class="games">
+
+<div class="card">
+<div class="info">
+<h3>🟢 Thiago</h3>
+<p>Online</p>
+</div>
+</div>
+
+<div class="card">
+<div class="info">
+<h3>🟢 João</h3>
+<p>Jogando</p>
+</div>
+</div>
+
+<div class="card">
+<div class="info">
+<h3>🟡 Maria</h3>
+<p>Ausente</p>
+</div>
+</div>
+
+<div class="card">
+<div class="info">
+<h3>🔴 Pedro</h3>
+<p>Offline</p>
+</div>
+</div>
+
+</div>
 
 </section>
 
@@ -380,9 +404,7 @@ Solicitar Avaliação
 
 <div>
 <h2>X-PLAY PASS</h2>
-<p>
-Acesso a jogos selecionados e benefícios exclusivos.
-</p>
+<p>Acesso a benefícios exclusivos.</p>
 </div>
 
 <button>
