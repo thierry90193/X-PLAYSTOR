@@ -6,7 +6,6 @@
 <title>X-PLAYSTOR</title>
 
 <style>
-
 *{
 margin:0;
 padding:0;
@@ -18,79 +17,61 @@ body{
 background:#050510;
 color:white;
 display:flex;
+height:100vh;
+overflow:hidden;
 }
 
 .sidebar{
-width:260px;
+width:240px;
 background:#090914;
-padding:25px;
-height:100vh;
-position:fixed;
-left:0;
-top:0;
-border-right:1px solid rgba(255,255,255,.05);
+padding:20px;
+border-right:1px solid #222;
 }
 
 .logo{
-font-size:55px;
+font-size:32px;
 font-weight:bold;
-text-align:center;
 color:#b026ff;
-text-shadow:0 0 25px #b026ff;
-}
-
-.slogan{
 text-align:center;
-margin-top:10px;
-color:#aaa;
-font-size:13px;
+margin-bottom:25px;
+text-shadow:0 0 15px #b026ff;
 }
 
-.menu{
-margin-top:40px;
-display:flex;
-flex-direction:column;
-gap:10px;
-}
-
-.menu a{
-text-decoration:none;
+.menu button{
+width:100%;
+padding:12px;
+margin-bottom:10px;
+background:#141425;
 color:white;
-padding:14px;
+border:none;
 border-radius:10px;
-transition:.3s;
+cursor:pointer;
 }
 
-.menu a:hover{
+.menu button:hover{
 background:#b026ff;
 }
 
 .main{
-margin-left:260px;
-width:calc(100% - 260px);
+flex:1;
+overflow:auto;
 }
 
 .topbar{
 background:#090914;
-padding:20px 30px;
+padding:15px;
 display:flex;
 justify-content:space-between;
 align-items:center;
 }
 
 .search{
-width:450px;
-padding:14px;
+width:400px;
+padding:12px;
 background:#141425;
 border:none;
 border-radius:10px;
 color:white;
-}
-
-.user{
-display:flex;
-align-items:center;
-gap:15px;
 }
 
 .coins{
@@ -99,152 +80,63 @@ padding:10px 15px;
 border-radius:10px;
 }
 
-.avatar{
-width:45px;
-height:45px;
-background:#b026ff;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-weight:bold;
-}
-
-.hero{
-margin:20px;
-height:450px;
-border-radius:20px;
-overflow:hidden;
-position:relative;
-background:
-linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.8)),
-url("https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1600&q=80");
-background-size:cover;
-background-position:center;
-}
-
-.hero-content{
-position:absolute;
-left:50px;
-bottom:50px;
-}
-
-.tag{
-display:inline-block;
-background:#b026ff;
-padding:8px 15px;
-border-radius:20px;
-margin-bottom:15px;
-}
-
-.hero h1{
-font-size:70px;
-}
-
-.hero span{
-color:#b026ff;
-}
-
-.hero p{
-font-size:20px;
-margin-top:10px;
-max-width:650px;
-}
-
-.hero button{
-margin-top:20px;
-padding:15px 30px;
-background:#b026ff;
-border:none;
-border-radius:12px;
-color:white;
-cursor:pointer;
-box-shadow:0 0 25px #b026ff;
-}
-
-.section{
+.content{
 padding:20px;
 }
 
-.section h2{
+.hero{
+background:linear-gradient(135deg,#1c0535,#b026ff);
+padding:50px;
+border-radius:20px;
 margin-bottom:20px;
-font-size:35px;
 }
 
-.games{
+.hero h1{
+font-size:55px;
+}
+
+.hero button{
+margin-top:15px;
+padding:12px 25px;
+background:white;
+border:none;
+border-radius:10px;
+cursor:pointer;
+}
+
+.cards{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:15px;
 }
 
 .card{
 background:#101020;
+padding:20px;
 border-radius:15px;
-overflow:hidden;
-transition:.3s;
 }
 
-.card:hover{
-transform:translateY(-8px);
-box-shadow:0 0 20px rgba(176,38,255,.4);
+.rightbar{
+width:240px;
+background:#090914;
+padding:20px;
+border-left:1px solid #222;
 }
 
-.card img{
-width:100%;
-height:180px;
-object-fit:cover;
-}
-
-.info{
-padding:15px;
-}
-
-.price{
-margin-top:10px;
-color:#b026ff;
-font-weight:bold;
-}
-
-.selection{
-margin:20px;
-padding:35px;
-background:linear-gradient(135deg,#19042f,#49117e);
-border-radius:20px;
-}
-
-.selection h2{
-color:#b026ff;
-margin-bottom:15px;
-}
-
-.selection button{
-margin-top:20px;
-padding:15px 25px;
-background:#b026ff;
-border:none;
+.friend{
+background:#141425;
+padding:10px;
 border-radius:10px;
-color:white;
-cursor:pointer;
+margin-bottom:10px;
 }
 
-.pass{
-margin:20px;
-padding:35px;
-background:linear-gradient(135deg,#430a77,#b026ff);
-border-radius:20px;
-display:flex;
-justify-content:space-between;
-align-items:center;
+.page{
+display:none;
 }
 
-.pass button{
-padding:15px 25px;
-border:none;
-border-radius:10px;
-cursor:pointer;
-font-weight:bold;
+.active{
+display:block;
 }
-
 </style>
 </head>
 
@@ -252,21 +144,15 @@ font-weight:bold;
 
 <div class="sidebar">
 
-<div class="logo">X</div>
-
-<div class="slogan">
-JOGOS. DIVERSÃO. SEM LIMITES.
+<div class="logo">
+X-PLAYSTOR
 </div>
 
 <div class="menu">
-<a href="#">🏠 Destaques</a>
-<a href="#">🔥 Lançamentos</a>
-<a href="#">🎮 Biblioteca</a>
-<a href="#">💎 Ofertas</a>
-<a href="#">👥 Lista de Amigos</a>
-<a href="#">🏆 Conquistas</a>
-<a href="#">⭐ Favoritos</a>
-<a href="#">⚙️ Configurações</a>
+<button onclick="showPage('home')">🏠 Home</button>
+<button onclick="showPage('loja')">🏪 Loja</button>
+<button onclick="showPage('biblioteca')">📚 Biblioteca</button>
+<button onclick="showPage('perfil')">👤 Perfil</button>
 </div>
 
 </div>
@@ -277,143 +163,158 @@ JOGOS. DIVERSÃO. SEM LIMITES.
 
 <input class="search" placeholder="🔍 Buscar jogos...">
 
-<div class="user">
-
 <div class="coins">
 🪙 1.250 X-Coins
 </div>
 
-<div class="avatar">
-XP
 </div>
 
+<div class="content">
+
+<!-- HOME -->
+
+<div id="home" class="page active">
+
+<div class="hero">
+<h1>X-PLAYSTOR</h1>
+<p>Jogos selecionados pela equipe X-PLAYSTOR.</p>
+<button>Explorar Loja</button>
 </div>
 
-</div>
+<h2>🔥 Destaques</h2>
 
-<section class="hero">
-
-<div class="hero-content">
-
-<div class="tag">
-LANÇAMENTO
-</div>
-
-<h1>X-PLAY<span>STOR</span></h1>
-
-<p>
-Sua plataforma gamer com jogos selecionados pela equipe X-PLAYSTOR.
-</p>
-
-<button>
-Explorar Loja
-</button>
-
-</div>
-
-</section>
-
-<section class="section">
-
-<h2>🎮 Destaques</h2>
-
-<div class="games">
+<div class="cards">
 
 <div class="card">
-<img src="https://picsum.photos/600/350?1">
-<div class="info">
 <h3>Jogo em Destaque</h3>
-<div class="price">R$ 89,90</div>
-</div>
-</div>
-
-<div class="card">
-<img src="https://picsum.photos/600/350?2">
-<div class="info">
-<h3>Novo Lançamento</h3>
-<div class="price">R$ 119,90</div>
-</div>
+<p>R$ 89,90</p>
 </div>
 
 <div class="card">
-<img src="https://picsum.photos/600/350?3">
-<div class="info">
 <h3>Mais Vendido</h3>
-<div class="price">R$ 149,90</div>
-</div>
-</div>
-
-</div>
-
-</section>
-
-<section class="selection">
-
-<h2>🏆 Seleção X-PLAYSTOR</h2>
-
-<p>
-Seu jogo pode fazer parte da seleção X-PLAYSTOR.
-Todos os projetos passam por análise antes de serem aprovados para a plataforma.
-</p>
-
-<button>
-Solicitar Avaliação de Jogos
-</button>
-
-</section>
-
-<section class="section">
-
-<h2>👥 Lista de Amigos</h2>
-
-<div class="games">
-
-<div class="card">
-<div class="info">
-<h3>🟢 Thiago</h3>
-<p>Online</p>
-</div>
+<p>R$ 129,90</p>
 </div>
 
 <div class="card">
-<div class="info">
-<h3>🟢 João</h3>
-<p>Jogando</p>
+<h3>Novo Lançamento</h3>
+<p>R$ 59,90</p>
 </div>
+
+</div>
+
+</div>
+
+<!-- LOJA -->
+
+<div id="loja" class="page">
+
+<h1>🏪 Loja</h1>
+
+<div class="cards">
+
+<div class="card">
+<h3>Cyber Game</h3>
+<p>⭐⭐⭐⭐⭐</p>
+<p>R$ 49,90</p>
 </div>
 
 <div class="card">
-<div class="info">
-<h3>🟡 Maria</h3>
-<p>Ausente</p>
-</div>
+<h3>Shadow Runner</h3>
+<p>⭐⭐⭐⭐</p>
+<p>R$ 89,90</p>
 </div>
 
 <div class="card">
-<div class="info">
-<h3>🔴 Pedro</h3>
-<p>Offline</p>
-</div>
-</div>
-
+<h3>Galaxy Wars</h3>
+<p>⭐⭐⭐⭐⭐</p>
+<p>R$ 149,90</p>
 </div>
 
-</section>
-
-<section class="pass">
-
-<div>
-<h2>X-PLAY PASS</h2>
-<p>Acesso a benefícios exclusivos.</p>
 </div>
 
-<button>
-ASSINAR AGORA
-</button>
+</div>
 
-</section>
+<!-- BIBLIOTECA -->
+
+<div id="biblioteca" class="page">
+
+<h1>📚 Minha Biblioteca</h1>
+
+<div class="cards">
+
+<div class="card">
+<h3>Minecraft</h3>
+<button>Jogar</button>
+</div>
+
+<div class="card">
+<h3>GTA V</h3>
+<button>Jogar</button>
+</div>
+
+<div class="card">
+<h3>Cyberpunk</h3>
+<button>Instalar</button>
+</div>
 
 </div>
+
+</div>
+
+<!-- PERFIL -->
+
+<div id="perfil" class="page">
+
+<h1>👤 Perfil</h1>
+
+<div class="card">
+
+<h2>ThierryXP</h2>
+
+<p>🎮 Jogos: 25</p>
+<p>🏆 Conquistas: 120</p>
+<p>👥 Amigos: 50</p>
+<p>⭐ Nível: 15</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="rightbar">
+
+<h2>👥 Amigos</h2>
+
+<div class="friend">
+🟢 João
+</div>
+
+<div class="friend">
+🟢 Maria
+</div>
+
+<div class="friend">
+🔴 Pedro
+</div>
+
+</div>
+
+<script>
+
+function showPage(page){
+
+document.querySelectorAll('.page')
+.forEach(p=>p.classList.remove('active'));
+
+document.getElementById(page)
+.classList.add('active');
+
+}
+
+</script>
 
 </body>
 </html>
