@@ -12,55 +12,52 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Segoe UI,sans-serif;
+font-family:'Segoe UI',sans-serif;
 }
 
 body{
 background:#050510;
 color:white;
 display:flex;
-height:100vh;
-overflow:hidden;
+min-height:100vh;
 }
 
-/* SIDEBAR */
-
 .sidebar{
-width:260px;
-background:#090914;
+width:280px;
+background:#080812;
+padding:30px;
 border-right:1px solid rgba(255,255,255,.05);
-padding:25px;
-display:flex;
-flex-direction:column;
+position:fixed;
+height:100%;
 }
 
 .logo{
-font-size:40px;
+font-size:60px;
 font-weight:bold;
-color:#b026ff;
 text-align:center;
-margin-bottom:10px;
-text-shadow:0 0 20px #b026ff;
+color:#b026ff;
+text-shadow:0 0 25px #b026ff;
 }
 
 .slogan{
-font-size:12px;
 text-align:center;
+margin-top:15px;
 color:#aaa;
-margin-bottom:30px;
+font-size:14px;
 }
 
 .menu{
+margin-top:50px;
 display:flex;
 flex-direction:column;
-gap:10px;
+gap:15px;
 }
 
 .menu a{
-text-decoration:none;
 color:white;
-padding:14px;
-border-radius:10px;
+text-decoration:none;
+padding:15px;
+border-radius:12px;
 transition:.3s;
 }
 
@@ -68,132 +65,125 @@ transition:.3s;
 background:#b026ff;
 }
 
-/* MAIN */
-
 .main{
-flex:1;
-overflow-y:auto;
+margin-left:280px;
+width:calc(100% - 280px);
 }
 
-/* HEADER */
-
-.header{
-height:80px;
+.topbar{
 display:flex;
-align-items:center;
 justify-content:space-between;
-padding:0 30px;
+align-items:center;
+padding:20px 30px;
 background:#090914;
 }
 
 .search{
-width:400px;
-padding:12px;
+width:450px;
+padding:15px;
 background:#141425;
 border:none;
-outline:none;
-border-radius:10px;
+border-radius:12px;
 color:white;
 }
 
-.user{
+.right{
 display:flex;
 align-items:center;
 gap:15px;
 }
 
+.coins{
+background:#141425;
+padding:12px 18px;
+border-radius:12px;
+}
+
 .avatar{
-width:45px;
-height:45px;
-border-radius:50%;
+width:55px;
+height:55px;
 background:#b026ff;
+border-radius:50%;
 display:flex;
 align-items:center;
 justify-content:center;
 font-weight:bold;
 }
 
-.coins{
-background:#141425;
-padding:10px 15px;
-border-radius:10px;
-}
-
-/* HERO */
-
 .hero{
-height:420px;
 margin:20px;
-border-radius:20px;
+height:500px;
+border-radius:25px;
 overflow:hidden;
 position:relative;
-
 background:
-linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.8)),
+linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.8)),
 url("https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1600&q=80");
-
 background-size:cover;
 background-position:center;
 }
 
 .hero-content{
 position:absolute;
-left:50px;
+left:60px;
 bottom:60px;
 }
 
-.hero h1{
-font-size:70px;
-color:white;
+.tag{
+display:inline-block;
+background:#b026ff;
+padding:8px 15px;
+border-radius:20px;
+margin-bottom:20px;
 }
 
-.hero span{
+.hero h1{
+font-size:80px;
+}
+
+.hero h1 span{
 color:#b026ff;
 }
 
 .hero p{
-margin-top:10px;
-font-size:18px;
+margin-top:15px;
+font-size:22px;
+max-width:700px;
 color:#ddd;
 }
 
 .hero button{
 margin-top:25px;
-padding:15px 30px;
-border:none;
+padding:18px 35px;
 background:#b026ff;
-color:white;
-font-size:16px;
+border:none;
 border-radius:12px;
+color:white;
 cursor:pointer;
-box-shadow:0 0 25px #b026ff;
+font-size:18px;
+box-shadow:0 0 30px #b026ff;
 }
 
-/* SEÇÕES */
-
 .section{
-padding:0 20px 30px;
+padding:20px;
 }
 
 .section h2{
+font-size:40px;
 margin-bottom:20px;
-font-size:30px;
 }
-
-/* CARDS */
 
 .games{
 display:grid;
-grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:20px;
 }
 
 .card{
 background:#101020;
-border-radius:16px;
+border-radius:20px;
 overflow:hidden;
 transition:.3s;
-cursor:pointer;
 }
 
 .card:hover{
@@ -203,54 +193,75 @@ box-shadow:0 0 25px rgba(176,38,255,.4);
 
 .card img{
 width:100%;
-height:170px;
+height:180px;
 object-fit:cover;
 }
 
-.card-info{
-padding:15px;
-}
-
-.card h3{
-margin-bottom:10px;
+.info{
+padding:20px;
 }
 
 .price{
+margin-top:10px;
 color:#b026ff;
 font-weight:bold;
 }
 
-/* PASS */
+.selection{
+margin:20px;
+padding:40px;
+border-radius:25px;
+background:linear-gradient(135deg,#18042e,#45117a);
+}
+
+.selection h2{
+color:#b026ff;
+margin-bottom:15px;
+}
+
+.selection p{
+font-size:18px;
+line-height:1.7;
+color:#ddd;
+max-width:900px;
+}
+
+.selection button{
+margin-top:25px;
+padding:15px 30px;
+background:#b026ff;
+border:none;
+border-radius:12px;
+color:white;
+cursor:pointer;
+}
 
 .pass{
 margin:20px;
-padding:30px;
-background:linear-gradient(135deg,#3d0a70,#b026ff);
-border-radius:20px;
+padding:40px;
+border-radius:25px;
+background:linear-gradient(135deg,#3c0970,#b026ff);
 display:flex;
 justify-content:space-between;
 align-items:center;
 }
 
 .pass h2{
-font-size:38px;
+font-size:45px;
 }
 
 .pass button{
-padding:14px 30px;
+padding:15px 30px;
 border:none;
-border-radius:10px;
-background:white;
-cursor:pointer;
+border-radius:12px;
 font-weight:bold;
+cursor:pointer;
 }
 
 </style>
 </head>
 
 <body>
-
-<!-- SIDEBAR -->
 
 <div class="sidebar">
 
@@ -268,23 +279,18 @@ JOGOS. DIVERSÃO. SEM LIMITES.
 <a href="#">🏆 Conquistas</a>
 <a href="#">👥 Comunidade</a>
 <a href="#">⭐ Favoritos</a>
-<a href="#">⚙ Configurações</a>
+<a href="#">⚙️ Configurações</a>
 </div>
 
 </div>
-
-<!-- MAIN -->
 
 <div class="main">
 
-<div class="header">
+<div class="topbar">
 
-<input
-class="search"
-placeholder="Buscar jogos, DLCs e amigos..."
->
+<input class="search" placeholder="Buscar jogos, DLCs e amigos...">
 
-<div class="user">
+<div class="right">
 
 <div class="coins">
 🪙 1.250 X-Coins
@@ -298,16 +304,18 @@ XP
 
 </div>
 
-<!-- HERO -->
-
 <section class="hero">
 
 <div class="hero-content">
 
+<div class="tag">
+LANÇAMENTO
+</div>
+
 <h1>X-PLAY<span>STOR</span></h1>
 
 <p>
-Sua plataforma gamer futurista.
+Sua plataforma gamer futurista com jogos selecionados e aprovados pela equipe X-PLAYSTOR.
 </p>
 
 <button>
@@ -318,8 +326,6 @@ Explorar Loja
 
 </section>
 
-<!-- DESTAQUES -->
-
 <section class="section">
 
 <h2>Destaques</h2>
@@ -327,34 +333,26 @@ Explorar Loja
 <div class="games">
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1542751371-adc38448a05e">
-<div class="card-info">
-<h3>Cyber Nexus</h3>
-<div class="price">R$ 149,90</div>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8">
-<div class="card-info">
-<h3>Galaxy Frontier</h3>
-<div class="price">R$ 199,90</div>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1511882150382-421056c89033">
-<div class="card-info">
-<h3>Shadow Legends</h3>
-<div class="price">R$ 99,90</div>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1560253023-3ec5d502959f">
-<div class="card-info">
-<h3>Nova Strike</h3>
+<img src="https://picsum.photos/600/350?1">
+<div class="info">
+<h3>Jogo em Destaque</h3>
 <div class="price">R$ 89,90</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/600/350?2">
+<div class="info">
+<h3>Novo Lançamento</h3>
+<div class="price">R$ 119,90</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/600/350?3">
+<div class="info">
+<h3>Mais Vendido</h3>
+<div class="price">R$ 149,90</div>
 </div>
 </div>
 
@@ -362,17 +360,33 @@ Explorar Loja
 
 </section>
 
-<!-- PASS -->
+<section class="selection">
+
+<h2>🏆 Seleção X-PLAYSTOR</h2>
+
+<p>
+Seu jogo pode fazer parte da seleção X-PLAYSTOR.
+Todos os projetos passam por uma análise antes de serem adicionados ao catálogo da plataforma.
+Buscamos qualidade, criatividade e uma ótima experiência para os jogadores.
+</p>
+
+<button>
+Solicitar Avaliação
+</button>
+
+</section>
 
 <section class="pass">
 
 <div>
 <h2>X-PLAY PASS</h2>
-<p>Acesso ilimitado a centenas de jogos.</p>
+<p>
+Acesso a jogos selecionados e benefícios exclusivos.
+</p>
 </div>
 
 <button>
-ASSINAR
+ASSINAR AGORA
 </button>
 
 </section>
