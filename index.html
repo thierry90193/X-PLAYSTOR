@@ -1,182 +1,220 @@
-<!-- MAIS VENDIDOS -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>X-PLAYSTOR</title>
 
-<section class="section">
+<style>
 
-<h2>🏆 Mais Vendidos</h2>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
 
-<div class="cards">
+body{
+    background:#0f172a;
+    color:white;
+}
 
-<div class="card">
-<img src="https://picsum.photos/400/220?11">
-<h3>War Zone X</h3>
-<p>R$ 199,90</p>
+.container{
+    display:flex;
+    min-height:100vh;
+}
+
+.sidebar{
+    width:280px;
+    background:#111827;
+    padding:25px;
+}
+
+.logo{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.logo h1{
+    color:#00d4ff;
+    font-size:32px;
+}
+
+.logo p{
+    color:#9ca3af;
+    margin-top:10px;
+}
+
+.menu h2{
+    margin-bottom:20px;
+}
+
+.menu a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    padding:12px;
+    margin-bottom:10px;
+    background:#1f2937;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.menu a:hover{
+    background:#00d4ff;
+}
+
+.main{
+    flex:1;
+    padding:30px;
+}
+
+.hero{
+    background:linear-gradient(135deg,#00d4ff,#7c3aed);
+    padding:50px;
+    border-radius:20px;
+    margin-bottom:30px;
+}
+
+.hero h1{
+    font-size:50px;
+}
+
+.hero p{
+    margin-top:15px;
+    font-size:18px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 25px;
+    background:white;
+    color:black;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:bold;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#1e293b;
+    border-radius:15px;
+    overflow:hidden;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:15px;
+}
+
+.price{
+    color:#00ff88;
+    font-size:22px;
+    margin-top:10px;
+}
+
+.buy{
+    display:inline-block;
+    margin-top:15px;
+    background:#00d4ff;
+    color:black;
+    text-decoration:none;
+    padding:10px 15px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<div class="sidebar">
+
+<div class="logo">
+<h1>X-PLAYSTOR</h1>
+<p>Jogos. Diversão. Sem Limites.</p>
 </div>
 
-<div class="card">
-<img src="https://picsum.photos/400/220?12">
-<h3>Ghost Empire</h3>
-<p>R$ 149,90</p>
-</div>
-
-<div class="card">
-<img src="https://picsum.photos/400/220?13">
-<h3>Dark World</h3>
-<p>R$ 89,90</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- CATEGORIAS -->
-
-<section class="section">
-
+<div class="menu">
 <h2>🎮 Categorias</h2>
 
-<div class="cards">
+<a href="#">⚔️ Ação</a>
+<a href="#">🧙 RPG</a>
+<a href="#">👻 Terror</a>
+<a href="#">🏎️ Corrida</a>
+<a href="#">👥 Multiplayer</a>
+<a href="#">🌍 Mundo Aberto</a>
 
-<div class="card">
-<h3>⚔️ Ação</h3>
-</div>
-
-<div class="card">
-<h3>🏹 RPG</h3>
-</div>
-
-<div class="card">
-<h3>👻 Terror</h3>
-</div>
-
-<div class="card">
-<h3>🏎 Corrida</h3>
-</div>
-
-<div class="card">
-<h3>👥 Multiplayer</h3>
-</div>
-
-<div class="card">
-<h3>🌎 Mundo Aberto</h3>
 </div>
 
 </div>
 
-</section>
+<div class="main">
 
-<!-- X PLAY PASS -->
-
-<section class="section">
-
-<h2>⭐ X-PLAY PASS</h2>
-
-<div class="card">
-
-<h3>Acesso ilimitado</h3>
-
-<p>
-Jogue centenas de títulos sem comprar individualmente.
-</p>
-
-<button>
-Assinar Agora
-</button>
-
+<div class="hero">
+<h1>🔥 Promoções da Semana</h1>
+<p>Os melhores jogos com descontos incríveis.</p>
+<a href="#" class="btn">Comprar Agora</a>
 </div>
 
-</section>
-
-<!-- BIBLIOTECA -->
-
-<section class="section">
-
-<h2>📚 Minha Biblioteca</h2>
+<h2 style="margin-bottom:20px;">Jogos em Destaque</h2>
 
 <div class="cards">
 
 <div class="card">
+<img src="https://images.unsplash.com/photo-1542751371-adc38448a05e">
+<div class="card-content">
 <h3>Minecraft</h3>
-<button>Jogar</button>
+<p>Explore mundos infinitos.</p>
+<div class="price">R$ 89,90</div>
+<a href="#" class="buy">Comprar</a>
+</div>
 </div>
 
 <div class="card">
+<img src="https://images.unsplash.com/photo-1511512578047-dfb367046420">
+<div class="card-content">
 <h3>GTA V</h3>
-<button>Jogar</button>
+<p>Aventura em mundo aberto.</p>
+<div class="price">R$ 119,90</div>
+<a href="#" class="buy">Comprar</a>
+</div>
 </div>
 
 <div class="card">
-<h3>Cyberpunk</h3>
-<button>Instalar</button>
+<img src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8">
+<div class="card-content">
+<h3>Cyber Runner</h3>
+<p>Ação futurista intensa.</p>
+<div class="price">R$ 59,90</div>
+<a href="#" class="buy">Comprar</a>
+</div>
 </div>
 
 </div>
 
-</section>
-
-<!-- CONQUISTAS -->
-
-<section class="section">
-
-<h2>🏅 Conquistas</h2>
-
-<div class="cards">
-
-<div class="card">
-🥇 Primeiro Jogo
-</div>
-
-<div class="card">
-🔥 10 Horas Jogadas
-</div>
-
-<div class="card">
-⭐ Colecionador
-</div>
-
-<div class="card">
-🚀 Explorador
 </div>
 
 </div>
 
-</section>
-
-<!-- NOTICIAS -->
-
-<section class="section">
-
-<h2>📰 Notícias X-PLAYSTOR</h2>
-
-<div class="card">
-
-<h3>Novo sistema de avaliação</h3>
-
-<p>
-
-Seu jogo passa por uma análise antes de entrar no catálogo da X-PLAYSTOR.
-
-Nossa equipe avalia critérios como qualidade, desempenho, estabilidade, criatividade e experiência do jogador.
-
-Apenas os jogos aprovados são adicionados à plataforma, garantindo um catálogo selecionado e confiável para toda a comunidade.
-
-</p>
-
-</div>
-
-</section>
-
-<!-- RODAPE -->
-
-<footer>
-
-<h2>X-PLAYSTOR</h2>
-
-<p>
-Jogos. Diversão. Sem Limites.
-</p>
-
-<p>
-© 2026 X-PLAYSTOR
-</p>
-
-</footer>
+</body>
+</html>
