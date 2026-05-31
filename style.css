@@ -10,19 +10,15 @@ background:#050510;
 color:white;
 display:flex;
 min-height:100vh;
-overflow-x:hidden;
 }
 
 /* SIDEBAR */
 
 .sidebar{
-width:260px;
+width:250px;
 background:#090914;
-padding:25px;
-border-right:1px solid #1f1f30;
-position:sticky;
-top:0;
-height:100vh;
+padding:20px;
+border-right:1px solid #1d1d35;
 }
 
 .logo{
@@ -31,31 +27,26 @@ margin-bottom:30px;
 }
 
 .logo h1{
-font-size:42px;
+font-size:38px;
 color:#b026ff;
 text-shadow:0 0 20px #b026ff;
-margin-bottom:10px;
 }
 
 .logo p{
 font-size:12px;
 color:#999;
-}
-
-nav{
-margin-top:20px;
+margin-top:5px;
 }
 
 nav a{
 display:block;
-padding:15px;
+padding:14px;
 margin-bottom:10px;
-background:#121220;
+background:#11111f;
 border-radius:12px;
 color:white;
 text-decoration:none;
 transition:.3s;
-font-weight:600;
 }
 
 nav a:hover{
@@ -63,9 +54,12 @@ background:#b026ff;
 transform:translateX(5px);
 }
 
+/* MAIN */
+
 .main{
 flex:1;
 padding:25px;
+overflow:auto;
 }
 
 /* TOPO */
@@ -78,13 +72,12 @@ margin-bottom:25px;
 }
 
 .search{
-width:500px;
+width:450px;
 padding:14px;
-background:#121220;
+background:#11111f;
 border:none;
 border-radius:12px;
 color:white;
-font-size:15px;
 }
 
 .search:focus{
@@ -99,9 +92,10 @@ gap:15px;
 }
 
 .coins{
-background:#121220;
-padding:14px 20px;
+background:#11111f;
+padding:12px 18px;
 border-radius:12px;
+border:1px solid #b026ff;
 font-weight:bold;
 }
 
@@ -109,7 +103,7 @@ font-weight:bold;
 display:flex;
 align-items:center;
 gap:10px;
-background:#121220;
+background:#11111f;
 padding:10px 15px;
 border-radius:12px;
 }
@@ -129,23 +123,19 @@ font-weight:bold;
 
 .hero{
 height:420px;
-background:url('https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1600&q=80');
-background-size:cover;
-background-position:center;
 border-radius:20px;
 overflow:hidden;
 margin-bottom:30px;
-position:relative;
+background:linear-gradient(
+135deg,
+#2b0055,
+#7a00ff,
+#b026ff
+);
 }
 
 .overlay{
-width:100%;
 height:100%;
-background:linear-gradient(
-90deg,
-rgba(0,0,0,.8),
-rgba(0,0,0,.2)
-);
 padding:60px;
 display:flex;
 flex-direction:column;
@@ -153,24 +143,24 @@ justify-content:center;
 }
 
 .tag{
-background:#b026ff;
+background:white;
+color:#7a00ff;
 padding:8px 15px;
 border-radius:20px;
 width:max-content;
-margin-bottom:20px;
-font-size:13px;
 font-weight:bold;
+margin-bottom:15px;
 }
 
 .overlay h1{
-font-size:72px;
-color:#b026ff;
+font-size:70px;
 margin-bottom:10px;
+text-shadow:0 0 25px #b026ff;
 }
 
 .overlay p{
-font-size:28px;
-margin-bottom:25px;
+font-size:22px;
+margin-bottom:20px;
 }
 
 .overlay button{
@@ -178,25 +168,20 @@ width:220px;
 padding:15px;
 border:none;
 border-radius:12px;
-background:#b026ff;
-color:white;
-font-size:18px;
+background:white;
+color:#7a00ff;
+font-weight:bold;
 cursor:pointer;
-transition:.3s;
 }
 
-.overlay button:hover{
-box-shadow:0 0 25px #b026ff;
-}
-
-/* NOTÍCIA */
+/* NOTICIA */
 
 .news{
 background:#11111f;
 padding:25px;
 border-radius:15px;
 margin-bottom:30px;
-border-left:4px solid #b026ff;
+border-left:5px solid #b026ff;
 }
 
 .news h2{
@@ -204,40 +189,40 @@ margin-bottom:15px;
 }
 
 .news p{
+color:#ccc;
 line-height:1.8;
-color:#d6d6d6;
 }
 
-/* SEÇÕES */
+/* SECTIONS */
 
 .section{
-margin-bottom:40px;
+margin-bottom:35px;
 }
 
 .section h2{
 margin-bottom:20px;
-font-size:32px;
+color:#fff;
 }
 
 /* CARDS */
 
 .cards{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
 }
 
 .card{
 background:#11111f;
-border-radius:18px;
+border-radius:15px;
 overflow:hidden;
 transition:.3s;
 cursor:pointer;
 }
 
 .card:hover{
-transform:translateY(-8px);
-box-shadow:0 0 30px rgba(176,38,255,.4);
+transform:translateY(-6px);
+box-shadow:0 0 25px rgba(176,38,255,.5);
 }
 
 .card img{
@@ -252,38 +237,37 @@ padding:15px;
 
 .card p{
 padding:0 15px;
-color:#bbb;
+color:#aaa;
 }
 
 .card h2{
 padding:15px;
 color:#b026ff;
-font-size:30px;
 }
 
 /* BOTÕES */
 
 button{
+background:#b026ff;
+color:white;
 padding:12px 18px;
 border:none;
 border-radius:10px;
-background:#b026ff;
-color:white;
 cursor:pointer;
-font-weight:bold;
+margin:15px;
 }
 
 button:hover{
-opacity:.9;
+background:#7a00ff;
 }
 
-/* AMIGOS */
+/* RIGHTBAR */
 
 .rightbar{
-width:260px;
+width:250px;
 background:#090914;
-padding:25px;
-border-left:1px solid #1f1f30;
+padding:20px;
+border-left:1px solid #1d1d35;
 }
 
 .rightbar h2{
@@ -291,23 +275,22 @@ margin-bottom:20px;
 }
 
 .friend{
-background:#121220;
-padding:15px;
-border-radius:12px;
-margin-bottom:12px;
-font-size:18px;
+background:#11111f;
+padding:12px;
+border-radius:10px;
+margin-bottom:10px;
 transition:.3s;
 }
 
 .friend:hover{
-background:#1c1c35;
+background:#1a1a30;
 }
 
-/* RODAPÉ */
+/* FOOTER */
 
 footer{
-margin-top:50px;
-padding:30px;
+margin-top:40px;
+padding:25px;
 background:#11111f;
 border-radius:15px;
 text-align:center;
@@ -360,40 +343,28 @@ width:100%;
 
 .topbar{
 flex-direction:column;
-gap:15px;
 align-items:flex-start;
+gap:15px;
 }
 
 .overlay h1{
 font-size:45px;
 }
 
-.overlay p{
-font-size:20px;
-}
-
-.hero{
-height:320px;
-}
-
 }
 
 @media(max-width:600px){
+
+.cards{
+grid-template-columns:1fr;
+}
 
 .overlay{
 padding:25px;
 }
 
 .overlay h1{
-font-size:34px;
-}
-
-.overlay p{
-font-size:18px;
-}
-
-.cards{
-grid-template-columns:1fr;
+font-size:35px;
 }
 
 }
