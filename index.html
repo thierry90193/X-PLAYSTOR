@@ -5,300 +5,363 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>X-PLAYSTOR</title>
 
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-
-body{
-background:#0f172a;
-color:white;
-}
-
-.container{
-display:flex;
-min-height:100vh;
-}
-
-.sidebar{
-width:270px;
-background:#111827;
-padding:25px;
-}
-
-.logo{
-text-align:center;
-margin-bottom:40px;
-}
-
-.logo h1{
-font-size:35px;
-color:#00d4ff;
-}
-
-.logo p{
-color:#9ca3af;
-margin-top:10px;
-}
-
-.menu a{
-display:block;
-padding:14px;
-margin-bottom:10px;
-text-decoration:none;
-color:white;
-background:#1f2937;
-border-radius:10px;
-transition:.3s;
-}
-
-.menu a:hover{
-background:#00d4ff;
-color:black;
-}
-
-.main{
-flex:1;
-padding:30px;
-}
-
-.topbar{
-display:flex;
-justify-content:space-between;
-align-items:center;
-margin-bottom:25px;
-}
-
-.search{
-width:60%;
-padding:15px;
-border:none;
-border-radius:10px;
-font-size:16px;
-}
-
-.user{
-background:#1f2937;
-padding:12px 20px;
-border-radius:10px;
-}
-
-.hero{
-background:linear-gradient(135deg,#00d4ff,#7c3aed);
-padding:60px;
-border-radius:20px;
-margin-bottom:30px;
-}
-
-.hero h1{
-font-size:50px;
-}
-
-.hero p{
-margin-top:15px;
-font-size:18px;
-}
-
-.hero button{
-margin-top:20px;
-padding:15px 30px;
-border:none;
-border-radius:10px;
-font-weight:bold;
-cursor:pointer;
-}
-
-.section-title{
-margin:35px 0 20px;
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
-.card{
-background:#1e293b;
-border-radius:15px;
-overflow:hidden;
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-8px);
-}
-
-.card img{
-width:100%;
-height:180px;
-object-fit:cover;
-}
-
-.card-content{
-padding:15px;
-}
-
-.price{
-color:#00ff88;
-font-size:22px;
-margin-top:10px;
-font-weight:bold;
-}
-
-.buy{
-display:inline-block;
-margin-top:10px;
-background:#00d4ff;
-padding:10px 15px;
-border-radius:8px;
-text-decoration:none;
-color:black;
-font-weight:bold;
-}
-
-.news{
-background:#1e293b;
-padding:20px;
-border-radius:15px;
-margin-top:15px;
-}
-
-.footer{
-margin-top:50px;
-text-align:center;
-color:#9ca3af;
-padding:20px;
-}
-
-</style>
+<link rel="stylesheet" href="style.css">
 
 </head>
 <body>
-
-<div class="container">
 
 <div class="sidebar">
 
 <div class="logo">
 <h1>X-PLAYSTOR</h1>
-<p>Jogos. Diversão. Sem Limites.</p>
+<p>JOGOS. DIVERSÃO. SEM LIMITES.</p>
 </div>
 
-<div class="menu">
-<a href="#">🏠 Início</a>
-<a href="#">🛒 Loja</a>
+<nav>
+
+<a href="#">🏠 Home</a>
+
+<a href="#">🏪 Loja</a>
+
 <a href="#">📚 Biblioteca</a>
+
+<a href="#">🏆 Conquistas</a>
+
+<a href="#">⭐ X-PLAY PASS</a>
+
 <a href="#">❤️ Favoritos</a>
-<a href="#">🏆 Mais Vendidos</a>
-<a href="#">📰 Notícias</a>
-<a href="#">⚙️ Configurações</a>
-</div>
+
+<a href="#">⬇ Downloads</a>
+
+<a href="#">⚙ Configurações</a>
+
+</nav>
 
 </div>
 
 <div class="main">
 
-<div class="topbar">
-<input class="search" placeholder="Pesquisar jogos...">
-<div class="user">
-👤 JogadorXP | 💰 R$ 150,00
-</div>
+<header class="topbar">
+
+<input
+type="text"
+placeholder="🔍 Buscar jogos..."
+class="search"
+>
+
+<div class="top-right">
+
+<div class="coins">
+🪙 1.250 X-Coins
 </div>
 
-<div class="hero">
-<h1>🔥 PROMOÇÕES DA SEMANA</h1>
-<p>Até 90% de desconto em centenas de jogos.</p>
-<button>Comprar Agora</button>
+<div class="profile">
+
+<div class="avatar">
+XP
 </div>
 
-<h2 class="section-title">🎮 Jogos em Destaque</h2>
+<div>
+
+<h4>X-PLAYER</h4>
+
+<span>Online</span>
+
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+<section class="hero">
+
+<div class="overlay">
+
+<span class="tag">
+LANÇAMENTO
+</span>
+
+<h1>
+X-PLAYSTOR
+</h1>
+
+<p>
+Jogos. Diversão. Sem Limites.
+</p>
+
+<button>
+Explorar Loja
+</button>
+
+</div>
+
+</section>
+
+<section class="news">
+
+<h2>
+🏆 Seleção X-PLAYSTOR
+</h2>
+
+<p>
+
+Seu jogo passa por uma análise antes de entrar no catálogo da X-PLAYSTOR.
+
+Nossa equipe avalia critérios como qualidade, desempenho, estabilidade, criatividade e experiência do jogador.
+
+Apenas os jogos aprovados são adicionados à plataforma, garantindo um catálogo selecionado e confiável para toda a comunidade.
+
+</p>
+
+</section>
+
+<section class="section">
+
+<h2>
+🔥 Promoções da Semana
+</h2>
 
 <div class="cards">
 
 <div class="card">
-<img src="https://picsum.photos/500/300?1">
-<div class="card-content">
-<h3>Minecraft</h3>
-<p>Explore mundos infinitos.</p>
-<div class="price">R$ 89,90</div>
-<a href="#" class="buy">Comprar</a>
-</div>
-</div>
 
-<div class="card">
-<img src="https://picsum.photos/500/300?2">
-<div class="card-content">
-<h3>GTA V</h3>
-<p>Mundo aberto cheio de ação.</p>
-<div class="price">R$ 119,90</div>
-<a href="#" class="buy">Comprar</a>
-</div>
-</div>
+<img src="https://picsum.photos/400/220?1">
 
-<div class="card">
-<img src="https://picsum.photos/500/300?3">
-<div class="card-content">
 <h3>Cyber Runner</h3>
-<p>Aventura futurista intensa.</p>
-<div class="price">R$ 59,90</div>
-<a href="#" class="buy">Comprar</a>
-</div>
-</div>
+
+<p>De R$ 89,90</p>
+
+<h2>R$ 39,90</h2>
 
 </div>
 
-<h2 class="section-title">🏆 Mais Vendidos</h2>
+<div class="card">
+
+<img src="https://picsum.photos/400/220?2">
+
+<h3>Galaxy Wars</h3>
+
+<p>De R$ 149,90</p>
+
+<h2>R$ 69,90</h2>
+
+</div>
+
+<div class="card">
+
+<img src="https://picsum.photos/400/220?3">
+
+<h3>Shadow Legacy</h3>
+
+<p>De R$ 119,90</p>
+
+<h2>R$ 59,90</h2>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>
+🚀 Novos Lançamentos
+</h2>
 
 <div class="cards">
 
 <div class="card">
-<img src="https://picsum.photos/500/300?4">
-<div class="card-content">
-<h3>Red Dead Redemption 2</h3>
-<div class="price">R$ 149,90</div>
-</div>
+
+<img src="https://picsum.photos/400/220?4">
+
+<h3>Astral Age</h3>
+
+<p>R$ 99,90</p>
+
 </div>
 
 <div class="card">
-<img src="https://picsum.photos/500/300?5">
-<div class="card-content">
-<h3>EA FC 26</h3>
-<div class="price">R$ 199,90</div>
-</div>
+
+<img src="https://picsum.photos/400/220?5">
+
+<h3>Project Awaken</h3>
+
+<p>R$ 159,90</p>
+
 </div>
 
 <div class="card">
-<img src="https://picsum.photos/500/300?6">
-<div class="card-content">
-<h3>Forza Horizon</h3>
-<div class="price">R$ 129,90</div>
+
+<img src="https://picsum.photos/400/220?6">
+
+<h3>Frostborn</h3>
+
+<p>R$ 109,90</p>
+
 </div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>
+🏆 Mais Vendidos
+</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<img src="https://picsum.photos/400/220?7">
+
+<h3>War Zone X</h3>
+
+<p>R$ 199,90</p>
+
+</div>
+
+<div class="card">
+
+<img src="https://picsum.photos/400/220?8">
+
+<h3>Ghost Empire</h3>
+
+<p>R$ 149,90</p>
+
+</div>
+
+<div class="card">
+
+<img src="https://picsum.photos/400/220?9">
+
+<h3>Dark World</h3>
+
+<p>R$ 89,90</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>
+🎮 Categorias
+</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>⚔️ Ação</h3>
+</div>
+
+<div class="card">
+<h3>🏹 RPG</h3>
+</div>
+
+<div class="card">
+<h3>👻 Terror</h3>
+</div>
+
+<div class="card">
+<h3>🏎 Corrida</h3>
+</div>
+
+<div class="card">
+<h3>👥 Multiplayer</h3>
+</div>
+
+<div class="card">
+<h3>🌎 Mundo Aberto</h3>
 </div>
 
 </div>
 
-<h2 class="section-title">📰 Notícias</h2>
+</section>
 
-<div class="news">
-<h3>Nova atualização da X-PLAYSTOR</h3>
-<p>Agora com promoções diárias e sistema de biblioteca.</p>
+<section class="section">
+
+<h2>
+⭐ X-PLAY PASS
+</h2>
+
+<div class="card">
+
+<h3>
+Jogue sem limites
+</h3>
+
+<p>
+Acesso a benefícios exclusivos para membros.
+</p>
+
+<button>
+ASSINAR AGORA
+</button>
+
 </div>
 
-<div class="news">
-<h3>Evento de Verão</h3>
-<p>Jogos com até 90% de desconto durante esta semana.</p>
+</section>
+
+<section class="section">
+
+<h2>
+📰 Notícias X-PLAYSTOR
+</h2>
+
+<div class="card">
+
+<h3>
+Equipe X-PLAYSTOR recebe novos jogos
+</h3>
+
+<p>
+Desenvolvedores podem solicitar uma avaliação para que seus projetos sejam analisados pela equipe da plataforma.
+</p>
+
 </div>
 
-<div class="footer">
-© 2026 X-PLAYSTOR | Todos os direitos reservados
-</div>
+</section>
+
+<footer>
+
+<h2>
+X-PLAYSTOR
+</h2>
+
+<p>
+Jogos. Diversão. Sem Limites.
+</p>
+
+<p>
+© 2026 X-PLAYSTOR
+</p>
+
+</footer>
 
 </div>
+
+<div class="rightbar">
+
+<h2>
+👥 Amigos
+</h2>
+
+<div class="friend">🟢 João</div>
+
+<div class="friend">🟢 Maria</div>
+
+<div class="friend">🟡 Lucas</div>
+
+<div class="friend">🔴 Pedro</div>
+
+<div class="friend">🟢 Ana</div>
 
 </div>
 
