@@ -1,197 +1,392 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>X-PLAYSTOR</title>
 
 <style>
-body{
+*{
 margin:0;
-font-family:Arial, sans-serif;
-background:#0b0b14;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI,sans-serif;
+}
+
+body{
+background:#050510;
 color:white;
 display:flex;
+height:100vh;
+overflow:hidden;
 }
 
-/* CONTEÚDO PRINCIPAL */
-.main{
-flex:3;
+.sidebar{
+width:240px;
+background:#090914;
 padding:20px;
+border-right:1px solid #1f1f2e;
 }
 
-/* SIDEBAR AMIGOS */
-.rightbar{
-flex:1;
-background:#0f0f1a;
-padding:20px;
-border-left:1px solid #222;
-min-height:100vh;
-}
-
-.friend{
-background:#141425;
-padding:12px;
-border-radius:10px;
-margin-bottom:10px;
-border-left:4px solid #b026ff;
-}
-
-/* CARDS */
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:15px;
+.logo{
+font-size:30px;
+font-weight:bold;
+color:#b026ff;
+text-align:center;
 margin-bottom:30px;
+text-shadow:0 0 20px #b026ff;
 }
 
-.card{
-background:#101020;
-padding:20px;
-border-radius:15px;
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-5px);
-box-shadow:0 0 20px rgba(176,38,255,.5);
-}
-
-.card img{
+.menu button{
 width:100%;
-border-radius:10px;
+padding:14px;
 margin-bottom:10px;
-}
-
-/* HERO */
-.hero{
-background:linear-gradient(135deg,#1c0535,#b026ff);
-padding:50px;
-border-radius:20px;
-margin-bottom:20px;
-box-shadow:0 0 30px rgba(176,38,255,.4);
-}
-
-button{
-background:#b026ff;
-border:none;
-padding:12px 18px;
+background:#141425;
 color:white;
+border:none;
 border-radius:10px;
 cursor:pointer;
 transition:.3s;
 }
 
-button:hover{
-background:#8b1ed6;
+.menu button:hover{
+background:#b026ff;
+}
+
+.main{
+flex:1;
+overflow:auto;
+}
+
+.topbar{
+background:#090914;
+padding:15px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.search{
+width:450px;
+padding:12px;
+background:#141425;
+border:none;
+border-radius:10px;
+color:white;
+}
+
+.profile{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.coins{
+background:#141425;
+padding:10px 15px;
+border-radius:10px;
+}
+
+.avatar{
+width:40px;
+height:40px;
+background:#b026ff;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:bold;
+}
+
+.content{
+padding:20px;
+}
+
+.hero{
+height:350px;
+border-radius:20px;
+padding:40px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.8)),
+url('https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1400&q=80');
+background-size:cover;
+background-position:center;
+margin-bottom:25px;
+}
+
+.hero h1{
+font-size:60px;
+color:#b026ff;
+}
+
+.hero p{
+font-size:20px;
+margin-top:10px;
+max-width:600px;
+}
+
+.hero button{
+width:200px;
+margin-top:20px;
+padding:15px;
+background:#b026ff;
+color:white;
+border:none;
+border-radius:10px;
+cursor:pointer;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;
+}
+
+.card{
+background:#101020;
+border-radius:15px;
+overflow:hidden;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+box-shadow:0 0 20px rgba(176,38,255,.4);
+}
+
+.card img{
+width:100%;
+height:160px;
+object-fit:cover;
+}
+
+.card-info{
+padding:15px;
+}
+
+.page{
+display:none;
+}
+
+.active{
+display:block;
+}
+
+.rightbar{
+width:220px;
+background:#090914;
+padding:20px;
+border-left:1px solid #1f1f2e;
+}
+
+.friend{
+background:#141425;
+padding:10px;
+border-radius:10px;
+margin-bottom:10px;
 }
 </style>
-
 </head>
 
 <body>
 
-<!-- MAIN -->
+<div class="sidebar">
+
+<div class="logo">
+X-PLAYSTOR
+</div>
+
+<div class="menu">
+<button onclick="showPage('home')">🏠 Home</button>
+<button onclick="showPage('loja')">🏪 Loja</button>
+<button onclick="showPage('biblioteca')">📚 Biblioteca</button>
+<button onclick="showPage('perfil')">👤 Perfil</button>
+</div>
+
+</div>
+
 <div class="main">
 
-<h2>🔥 Promoções da Semana</h2>
+<div class="topbar">
+
+<input class="search" placeholder="🔍 Buscar jogos...">
+
+<div class="profile">
+<div class="coins">🪙 1.250 X-Coins</div>
+<div class="avatar">XP</div>
+</div>
+
+</div>
+
+<div class="content">
+
+<div id="home" class="page active">
+
+<div class="hero">
+<h1>X-PLAYSTOR</h1>
+<p>Jogos. Diversão. Sem Limites.</p>
+<button>Explorar Loja</button>
+</div>
+
+<h2 style="margin-bottom:15px;">🔥 Destaques</h2>
 
 <div class="cards">
 
 <div class="card">
-<img src="https://picsum.photos/400/220?1">
+<img src="https://picsum.photos/500/300?1">
+<div class="card-info">
 <h3>Cyber Runner</h3>
-<p>De R$ 89,90 por</p>
-<h2 style="color:#b026ff;">R$ 39,90</h2>
+<p>R$ 89,90</p>
+</div>
 </div>
 
 <div class="card">
-<img src="https://picsum.photos/400/220?2">
+<img src="https://picsum.photos/500/300?2">
+<div class="card-info">
 <h3>Galaxy Wars</h3>
-<p>De R$ 149,90 por</p>
-<h2 style="color:#b026ff;">R$ 69,90</h2>
+<p>R$ 129,90</p>
+</div>
 </div>
 
 <div class="card">
-<img src="https://picsum.photos/400/220?3">
+<img src="https://picsum.photos/500/300?3">
+<div class="card-info">
 <h3>Shadow Legacy</h3>
-<p>De R$ 119,90 por</p>
-<h2 style="color:#b026ff;">R$ 59,90</h2>
+<p>R$ 59,90</p>
+</div>
 </div>
 
 </div>
 
-<h2>🚀 Lançamentos</h2>
+</div>
+
+<div id="loja" class="page">
+
+<h1>🏪 Loja</h1>
+
+<br>
 
 <div class="cards">
 
 <div class="card">
-<img src="https://picsum.photos/400/220?4">
-<h3>Neon City</h3>
-<p>Disponível agora</p>
-</div>
-
-<div class="card">
-<img src="https://picsum.photos/400/220?5">
+<img src="https://picsum.photos/500/300?4">
+<div class="card-info">
 <h3>Future Combat</h3>
-<p>Disponível agora</p>
+<p>⭐⭐⭐⭐⭐</p>
+<p>R$ 49,90</p>
+</div>
 </div>
 
 <div class="card">
-<img src="https://picsum.photos/400/220?6">
-<h3>Dark Universe</h3>
-<p>Disponível agora</p>
+<img src="https://picsum.photos/500/300?5">
+<div class="card-info">
+<h3>Dark World</h3>
+<p>⭐⭐⭐⭐</p>
+<p>R$ 89,90</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/500/300?6">
+<div class="card-info">
+<h3>Neon City</h3>
+<p>⭐⭐⭐⭐⭐</p>
+<p>R$ 149,90</p>
+</div>
 </div>
 
 </div>
 
-<div class="hero">
-<h1>🏆 Seleção X-PLAYSTOR</h1>
-<p>Apenas jogos aprovados pela equipe entram no catálogo oficial.</p>
-<button>Solicitar Avaliação de Jogos</button>
 </div>
 
-<div class="hero">
-<h1>💎 X-PLAY PASS</h1>
-<p>Tenha acesso a promoções exclusivas e benefícios especiais.</p>
-<button>Assinar Agora</button>
-</div>
+<div id="biblioteca" class="page">
 
-<h2>📰 Notícias</h2>
+<h1>📚 Minha Biblioteca</h1>
+
+<br>
 
 <div class="cards">
 
 <div class="card">
-<h3>Nova atualização da plataforma</h3>
-<p>Melhorias de desempenho e interface.</p>
+<div class="card-info">
+<h3>Minecraft</h3>
+<button>Jogar</button>
+</div>
 </div>
 
 <div class="card">
-<h3>X-Coins chegando</h3>
-<p>Em breve sistema completo de moedas.</p>
+<div class="card-info">
+<h3>GTA V</h3>
+<button>Jogar</button>
+</div>
 </div>
 
 <div class="card">
-<h3>Novos recursos sociais</h3>
-<p>Sistema de amigos em desenvolvimento.</p>
+<div class="card-info">
+<h3>Cyberpunk</h3>
+<button>Instalar</button>
+</div>
 </div>
 
 </div>
 
 </div>
 
-<!-- RIGHT BAR -->
+<div id="perfil" class="page">
+
+<h1>👤 Perfil</h1>
+
+<br>
+
+<div class="card">
+
+<div class="card-info">
+
+<h2>ThierryXP</h2>
+
+<br>
+
+<p>🎮 Jogos: 25</p>
+<p>🏆 Conquistas: 120</p>
+<p>👥 Amigos: 50</p>
+<p>⭐ Nível: 15</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 <div class="rightbar">
 
-<h2>👥 Lista de Amigos</h2>
+<h2>👥 Amigos</h2>
 
-<div class="friend">🟢 João<br><small>Online</small></div>
-<div class="friend">🟢 Maria<br><small>Jogando</small></div>
-<div class="friend">🟡 Lucas<br><small>Ausente</small></div>
-<div class="friend">🔴 Pedro<br><small>Offline</small></div>
-<div class="friend">🟢 Ana<br><small>Jogando</small></div>
+<br>
+
+<div class="friend">🟢 João</div>
+<div class="friend">🟢 Maria</div>
+<div class="friend">🟡 Lucas</div>
+<div class="friend">🔴 Pedro</div>
 
 </div>
+
+<script>
+function showPage(page){
+
+document.querySelectorAll('.page').forEach(function(p){
+p.classList.remove('active');
+});
+
+document.getElementById(page).classList.add('active');
+
+}
+</script>
 
 </body>
 </html>
