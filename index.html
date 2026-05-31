@@ -8,136 +8,171 @@
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
 }
 
 body{
-    background:#0f172a;
-    color:white;
+background:#0f172a;
+color:white;
 }
 
 .container{
-    display:flex;
-    min-height:100vh;
+display:flex;
+min-height:100vh;
 }
 
 .sidebar{
-    width:280px;
-    background:#111827;
-    padding:25px;
+width:270px;
+background:#111827;
+padding:25px;
 }
 
 .logo{
-    text-align:center;
-    margin-bottom:40px;
+text-align:center;
+margin-bottom:40px;
 }
 
 .logo h1{
-    color:#00d4ff;
-    font-size:32px;
+font-size:35px;
+color:#00d4ff;
 }
 
 .logo p{
-    color:#9ca3af;
-    margin-top:10px;
-}
-
-.menu h2{
-    margin-bottom:20px;
+color:#9ca3af;
+margin-top:10px;
 }
 
 .menu a{
-    display:block;
-    color:white;
-    text-decoration:none;
-    padding:12px;
-    margin-bottom:10px;
-    background:#1f2937;
-    border-radius:10px;
-    transition:0.3s;
+display:block;
+padding:14px;
+margin-bottom:10px;
+text-decoration:none;
+color:white;
+background:#1f2937;
+border-radius:10px;
+transition:.3s;
 }
 
 .menu a:hover{
-    background:#00d4ff;
+background:#00d4ff;
+color:black;
 }
 
 .main{
-    flex:1;
-    padding:30px;
+flex:1;
+padding:30px;
+}
+
+.topbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:25px;
+}
+
+.search{
+width:60%;
+padding:15px;
+border:none;
+border-radius:10px;
+font-size:16px;
+}
+
+.user{
+background:#1f2937;
+padding:12px 20px;
+border-radius:10px;
 }
 
 .hero{
-    background:linear-gradient(135deg,#00d4ff,#7c3aed);
-    padding:50px;
-    border-radius:20px;
-    margin-bottom:30px;
+background:linear-gradient(135deg,#00d4ff,#7c3aed);
+padding:60px;
+border-radius:20px;
+margin-bottom:30px;
 }
 
 .hero h1{
-    font-size:50px;
+font-size:50px;
 }
 
 .hero p{
-    margin-top:15px;
-    font-size:18px;
+margin-top:15px;
+font-size:18px;
 }
 
-.btn{
-    display:inline-block;
-    margin-top:20px;
-    padding:12px 25px;
-    background:white;
-    color:black;
-    text-decoration:none;
-    border-radius:10px;
-    font-weight:bold;
+.hero button{
+margin-top:20px;
+padding:15px 30px;
+border:none;
+border-radius:10px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.section-title{
+margin:35px 0 20px;
 }
 
 .cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
 
 .card{
-    background:#1e293b;
-    border-radius:15px;
-    overflow:hidden;
-    transition:0.3s;
+background:#1e293b;
+border-radius:15px;
+overflow:hidden;
+transition:.3s;
 }
 
 .card:hover{
-    transform:translateY(-5px);
+transform:translateY(-8px);
 }
 
 .card img{
-    width:100%;
-    height:180px;
-    object-fit:cover;
+width:100%;
+height:180px;
+object-fit:cover;
 }
 
 .card-content{
-    padding:15px;
+padding:15px;
 }
 
 .price{
-    color:#00ff88;
-    font-size:22px;
-    margin-top:10px;
+color:#00ff88;
+font-size:22px;
+margin-top:10px;
+font-weight:bold;
 }
 
 .buy{
-    display:inline-block;
-    margin-top:15px;
-    background:#00d4ff;
-    color:black;
-    text-decoration:none;
-    padding:10px 15px;
-    border-radius:8px;
-    font-weight:bold;
+display:inline-block;
+margin-top:10px;
+background:#00d4ff;
+padding:10px 15px;
+border-radius:8px;
+text-decoration:none;
+color:black;
+font-weight:bold;
+}
+
+.news{
+background:#1e293b;
+padding:20px;
+border-radius:15px;
+margin-top:15px;
+}
+
+.footer{
+margin-top:50px;
+text-align:center;
+color:#9ca3af;
+padding:20px;
 }
 
 </style>
@@ -155,33 +190,38 @@ body{
 </div>
 
 <div class="menu">
-<h2>🎮 Categorias</h2>
-
-<a href="#">⚔️ Ação</a>
-<a href="#">🧙 RPG</a>
-<a href="#">👻 Terror</a>
-<a href="#">🏎️ Corrida</a>
-<a href="#">👥 Multiplayer</a>
-<a href="#">🌍 Mundo Aberto</a>
-
+<a href="#">🏠 Início</a>
+<a href="#">🛒 Loja</a>
+<a href="#">📚 Biblioteca</a>
+<a href="#">❤️ Favoritos</a>
+<a href="#">🏆 Mais Vendidos</a>
+<a href="#">📰 Notícias</a>
+<a href="#">⚙️ Configurações</a>
 </div>
 
 </div>
 
 <div class="main">
 
-<div class="hero">
-<h1>🔥 Promoções da Semana</h1>
-<p>Os melhores jogos com descontos incríveis.</p>
-<a href="#" class="btn">Comprar Agora</a>
+<div class="topbar">
+<input class="search" placeholder="Pesquisar jogos...">
+<div class="user">
+👤 JogadorXP | 💰 R$ 150,00
+</div>
 </div>
 
-<h2 style="margin-bottom:20px;">Jogos em Destaque</h2>
+<div class="hero">
+<h1>🔥 PROMOÇÕES DA SEMANA</h1>
+<p>Até 90% de desconto em centenas de jogos.</p>
+<button>Comprar Agora</button>
+</div>
+
+<h2 class="section-title">🎮 Jogos em Destaque</h2>
 
 <div class="cards">
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1542751371-adc38448a05e">
+<img src="https://picsum.photos/500/300?1">
 <div class="card-content">
 <h3>Minecraft</h3>
 <p>Explore mundos infinitos.</p>
@@ -191,20 +231,20 @@ body{
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1511512578047-dfb367046420">
+<img src="https://picsum.photos/500/300?2">
 <div class="card-content">
 <h3>GTA V</h3>
-<p>Aventura em mundo aberto.</p>
+<p>Mundo aberto cheio de ação.</p>
 <div class="price">R$ 119,90</div>
 <a href="#" class="buy">Comprar</a>
 </div>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8">
+<img src="https://picsum.photos/500/300?3">
 <div class="card-content">
 <h3>Cyber Runner</h3>
-<p>Ação futurista intensa.</p>
+<p>Aventura futurista intensa.</p>
 <div class="price">R$ 59,90</div>
 <a href="#" class="buy">Comprar</a>
 </div>
@@ -212,43 +252,55 @@ body{
 
 </div>
 
-</div>
-
-</div>
-<h2 style="margin-top:40px;margin-bottom:20px;">🏆 Jogos Mais Vendidos</h2>
+<h2 class="section-title">🏆 Mais Vendidos</h2>
 
 <div class="cards">
 
 <div class="card">
-<div class="card-content">
-<h3>Minecraft</h3>
-<p>Mais vendido da semana.</p>
-</div>
-</div>
-
-<div class="card">
-<div class="card-content">
-<h3>GTA V</h3>
-<p>Milhares de jogadores online.</p>
-</div>
-</div>
-
-<div class="card">
+<img src="https://picsum.photos/500/300?4">
 <div class="card-content">
 <h3>Red Dead Redemption 2</h3>
-<p>Aventura épica no velho oeste.</p>
+<div class="price">R$ 149,90</div>
 </div>
 </div>
-
-</div>
-
-<h2 style="margin-top:40px;margin-bottom:20px;">📰 Notícias</h2>
 
 <div class="card">
+<img src="https://picsum.photos/500/300?5">
 <div class="card-content">
+<h3>EA FC 26</h3>
+<div class="price">R$ 199,90</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/500/300?6">
+<div class="card-content">
+<h3>Forza Horizon</h3>
+<div class="price">R$ 129,90</div>
+</div>
+</div>
+
+</div>
+
+<h2 class="section-title">📰 Notícias</h2>
+
+<div class="news">
 <h3>Nova atualização da X-PLAYSTOR</h3>
-<p>Agora com mais jogos e promoções.</p>
+<p>Agora com promoções diárias e sistema de biblioteca.</p>
 </div>
+
+<div class="news">
+<h3>Evento de Verão</h3>
+<p>Jogos com até 90% de desconto durante esta semana.</p>
 </div>
+
+<div class="footer">
+© 2026 X-PLAYSTOR | Todos os direitos reservados
+</div>
+
+</div>
+
+</div>
+
 </body>
 </html>
