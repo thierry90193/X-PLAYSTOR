@@ -912,3 +912,40 @@ box-shadow:
 0 0 30px #b026ff;
 
 }
+.hero{
+
+box-shadow:
+0 0 20px rgba(176,38,255,.4),
+0 0 40px rgba(176,38,255,.2);
+
+}
+
+.section-header h2{
+
+text-shadow:
+0 0 10px #b026ff,
+0 0 20px #b026ff;
+
+}
+
+.pass-card{
+
+box-shadow:
+0 0 15px #7a00ff,
+0 0 30px #b026ff;
+
+}
+
+.offer-box{
+
+box-shadow:
+0 0 15px rgba(176,38,255,.5);
+
+}
+
+.xcoins-box{
+
+box-shadow:
+0 0 15px rgba(176,38,255,.5);
+
+}
