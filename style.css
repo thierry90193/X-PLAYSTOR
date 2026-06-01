@@ -368,3 +368,30 @@ font-size:35px;
 }
 
 }
+/* STATUS DOS AMIGOS */
+
+.friend{
+background:#11111f;
+padding:12px 15px;
+border-radius:10px;
+margin-bottom:10px;
+font-size:16px;
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.status-online{
+color:#00ff66;
+font-size:18px;
+}
+
+.status-away{
+color:#ffd500;
+font-size:18px;
+}
+
+.status-offline{
+color:#ff3b3b;
+font-size:18px;
+}
