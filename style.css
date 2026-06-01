@@ -623,3 +623,114 @@ text-align:center;
 }
 
 }
+/* ========================= */
+/* X-PLAYSTOR FUTURO */
+/* ========================= */
+
+body{
+background:
+radial-gradient(circle at top,
+#2d0066 0%,
+#130022 30%,
+#090914 60%,
+#050510 100%);
+}
+
+/* EFEITO NEON */
+
+.logo h1{
+color:#b026ff;
+text-shadow:
+0 0 10px #b026ff,
+0 0 20px #b026ff,
+0 0 40px #b026ff;
+}
+
+.section-header h2{
+text-shadow:
+0 0 10px rgba(176,38,255,.6);
+}
+
+/* CARDS */
+
+.game-card{
+border:1px solid rgba(176,38,255,.15);
+}
+
+.game-card:hover{
+transform:translateY(-8px);
+box-shadow:
+0 0 15px rgba(176,38,255,.5),
+0 0 30px rgba(176,38,255,.3);
+}
+
+/* BOTÕES */
+
+.buy-btn,
+.pass-banner button,
+.pass-card button{
+
+background:linear-gradient(
+135deg,
+#7a00ff,
+#b026ff
+);
+
+color:white;
+
+transition:.3s;
+}
+
+.buy-btn:hover,
+.pass-banner button:hover,
+.pass-card button:hover{
+
+transform:scale(1.05);
+
+box-shadow:
+0 0 15px #b026ff,
+0 0 30px #b026ff;
+
+}
+
+/* PERFIL */
+
+.avatar{
+box-shadow:
+0 0 15px #b026ff;
+}
+
+/* XCOINS */
+
+.xcoins-box{
+box-shadow:
+0 0 20px rgba(176,38,255,.5);
+}
+
+/* PASS */
+
+.pass-banner,
+.pass-card{
+
+box-shadow:
+0 0 25px rgba(176,38,255,.4);
+
+}
+
+/* OFERTA */
+
+.offer-box{
+border:1px solid rgba(176,38,255,.2);
+}
+
+/* AMIGOS */
+
+.friend:hover{
+
+background:#24243b;
+
+transform:translateX(5px);
+
+transition:.3s;
+
+}
