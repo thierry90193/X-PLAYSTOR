@@ -734,3 +734,45 @@ transform:translateX(5px);
 transition:.3s;
 
 }
+/* ========================= */
+/* LOGO X-PLAYSTOR */
+/* ========================= */
+
+.x-logo{
+position:relative;
+display:flex;
+justify-content:center;
+align-items:center;
+margin-bottom:15px;
+height:100px;
+}
+
+.x-controller{
+font-size:65px;
+filter:drop-shadow(0 0 20px #b026ff);
+}
+
+.x-text{
+position:absolute;
+font-size:38px;
+font-weight:900;
+color:white;
+
+text-shadow:
+0 0 10px #b026ff,
+0 0 20px #b026ff,
+0 0 40px #b026ff;
+}
+
+.logo h1{
+font-size:28px;
+font-weight:900;
+letter-spacing:2px;
+}
+
+.logo p{
+font-size:11px;
+color:#aaa;
+margin-top:8px;
+letter-spacing:1px;
+}
