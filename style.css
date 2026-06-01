@@ -875,3 +875,40 @@ transition:.4s;
 .game-card:hover img{
 transform:scale(1.08);
 }
+.offer-btn{
+
+width:100%;
+
+padding:12px;
+
+margin-top:12px;
+
+border:none;
+
+border-radius:12px;
+
+background:linear-gradient(
+135deg,
+#7a00ff,
+#b026ff
+);
+
+color:white;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.offer-btn:hover{
+
+transform:scale(1.03);
+
+box-shadow:
+0 0 15px #b026ff,
+0 0 30px #b026ff;
+
+}
