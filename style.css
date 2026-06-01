@@ -1,3 +1,7 @@
+/* ========================= */
+/* X-PLAYSTOR STYLE CSS PT1  */
+/* ========================= */
+
 *{
 margin:0;
 padding:0;
@@ -8,17 +12,23 @@ font-family:'Segoe UI',sans-serif;
 body{
 background:#050510;
 color:white;
+overflow-x:hidden;
+}
+
+.app{
 display:flex;
 min-height:100vh;
 }
 
+/* ========================= */
 /* SIDEBAR */
+/* ========================= */
 
 .sidebar{
-width:250px;
+width:280px;
 background:#090914;
-padding:20px;
-border-right:1px solid #1d1d35;
+padding:25px;
+border-right:1px solid #1a1a2b;
 }
 
 .logo{
@@ -26,43 +36,109 @@ text-align:center;
 margin-bottom:30px;
 }
 
+.logo-icon{
+font-size:70px;
+margin-bottom:10px;
+}
+
 .logo h1{
 font-size:38px;
 color:#b026ff;
+font-weight:800;
 text-shadow:0 0 20px #b026ff;
 }
 
 .logo p{
 font-size:12px;
 color:#999;
-margin-top:5px;
+margin-top:10px;
 }
 
-nav a{
-display:block;
-padding:14px;
-margin-bottom:10px;
+.menu{
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+.menu a{
 background:#11111f;
+padding:14px;
 border-radius:12px;
-color:white;
 text-decoration:none;
+color:white;
 transition:.3s;
 }
 
-nav a:hover{
+.menu a:hover{
 background:#b026ff;
 transform:translateX(5px);
 }
 
-/* MAIN */
-
-.main{
-flex:1;
-padding:25px;
-overflow:auto;
+.menu .active{
+background:#b026ff;
 }
 
-/* TOPO */
+.library{
+margin-top:30px;
+}
+
+.library h3{
+margin-bottom:15px;
+color:#ccc;
+}
+
+.library a{
+display:block;
+background:#11111f;
+padding:12px;
+margin-bottom:10px;
+border-radius:10px;
+text-decoration:none;
+color:white;
+transition:.3s;
+}
+
+.library a:hover{
+background:#b026ff;
+}
+
+.pass-card{
+margin-top:25px;
+padding:20px;
+border-radius:15px;
+background:linear-gradient(
+135deg,
+#5b00ff,
+#b026ff
+);
+}
+
+.pass-card h2{
+margin-bottom:10px;
+}
+
+.pass-card p{
+margin-bottom:15px;
+font-size:14px;
+}
+
+.pass-card button{
+width:100%;
+padding:12px;
+border:none;
+border-radius:10px;
+cursor:pointer;
+font-weight:bold;
+}
+
+/* ========================= */
+/* MAIN */
+/* ========================= */
+
+.content{
+flex:1;
+padding:25px;
+}
 
 .topbar{
 display:flex;
@@ -72,12 +148,13 @@ margin-bottom:25px;
 }
 
 .search{
-width:450px;
-padding:14px;
-background:#11111f;
+width:500px;
+padding:15px;
 border:none;
 border-radius:12px;
+background:#11111f;
 color:white;
+font-size:15px;
 }
 
 .search:focus{
@@ -85,18 +162,22 @@ outline:none;
 box-shadow:0 0 15px #b026ff;
 }
 
-.top-right{
+.top-actions{
 display:flex;
 align-items:center;
 gap:15px;
 }
 
-.coins{
+.notification,
+.cart{
+width:45px;
+height:45px;
 background:#11111f;
-padding:12px 18px;
+display:flex;
+align-items:center;
+justify-content:center;
 border-radius:12px;
-border:1px solid #b026ff;
-font-weight:bold;
+cursor:pointer;
 }
 
 .profile{
@@ -119,206 +200,368 @@ justify-content:center;
 font-weight:bold;
 }
 
-/* HERO */
-
-.hero{
-height:420px;
-border-radius:20px;
-overflow:hidden;
-margin-bottom:30px;
-background:linear-gradient(
-135deg,
-#2b0055,
-#7a00ff,
-#b026ff
-);
+.profile h4{
+font-size:14px;
 }
 
-.overlay{
-height:100%;
+.profile span{
+font-size:12px;
+color:#b026ff;
+}
+
+/* ========================= */
+/* HERO */
+/* ========================= */
+
+.hero{
+height:450px;
+border-radius:20px;
+overflow:hidden;
+position:relative;
+
+background:url('https://images.unsplash.com/photo-1511512578047-dfb367046420')
+center/cover;
+}
+
+.hero::before{
+content:'';
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.55);
+}
+
+.hero-overlay{
+position:relative;
+z-index:2;
 padding:60px;
-display:flex;
-flex-direction:column;
-justify-content:center;
 }
 
 .tag{
-background:white;
-color:#7a00ff;
+display:inline-block;
 padding:8px 15px;
-border-radius:20px;
-width:max-content;
-font-weight:bold;
+background:#b026ff;
+border-radius:8px;
 margin-bottom:15px;
 }
 
-.overlay h1{
-font-size:70px;
-margin-bottom:10px;
-text-shadow:0 0 25px #b026ff;
+.hero h1{
+font-size:90px;
+font-weight:900;
 }
 
-.overlay p{
-font-size:22px;
+.hero h2{
+font-size:40px;
+color:#b026ff;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:18px;
 margin-bottom:20px;
 }
 
-.overlay button{
-width:220px;
-padding:15px;
-border:none;
-border-radius:12px;
-background:white;
-color:#7a00ff;
+.price{
+font-size:35px;
 font-weight:bold;
+margin-bottom:25px;
+}
+
+.hero-buttons{
+display:flex;
+gap:10px;
+}
+
+.buy-btn{
+background:#b026ff;
+color:white;
+border:none;
+padding:15px 30px;
+border-radius:10px;
 cursor:pointer;
+font-weight:bold;
 }
 
-/* NOTICIA */
-
-.news{
+.wish-btn{
 background:#11111f;
-padding:25px;
-border-radius:15px;
-margin-bottom:30px;
-border-left:5px solid #b026ff;
-}
+color:white;
+border:none;
+padding:15px 20px;
+border-radius:10px;
+cursor:pointer;
+}/* ========================= */
+/* X-PLAYSTOR STYLE CSS PT2  */
+/* ========================= */
 
-.news h2{
-margin-bottom:15px;
-}
-
-.news p{
-color:#ccc;
-line-height:1.8;
-}
-
-/* SECTIONS */
+/* SEÇÕES */
 
 .section{
-margin-bottom:35px;
+margin-top:35px;
 }
 
-.section h2{
+.section-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
 margin-bottom:20px;
-color:#fff;
 }
 
-/* CARDS */
+.section-header h2{
+font-size:28px;
+}
 
-.cards{
+.section-header a{
+color:#b026ff;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* GRID DOS JOGOS */
+
+.games-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:
+repeat(auto-fill,minmax(260px,1fr));
 gap:20px;
 }
 
-.card{
+.game-card{
 background:#11111f;
 border-radius:15px;
 overflow:hidden;
-transition:.3s;
 cursor:pointer;
+transition:.3s;
 }
 
-.card:hover{
-transform:translateY(-6px);
-box-shadow:0 0 25px rgba(176,38,255,.5);
+.game-card:hover{
+transform:translateY(-8px);
+box-shadow:0 0 30px rgba(176,38,255,.5);
 }
 
-.card img{
+.game-card img{
 width:100%;
 height:180px;
 object-fit:cover;
 }
 
-.card h3{
+.game-info{
 padding:15px;
 }
 
-.card p{
-padding:0 15px;
-color:#aaa;
+.game-info h3{
+margin-bottom:10px;
+font-size:18px;
 }
 
-.card h2{
-padding:15px;
+.game-info p{
+color:#ccc;
+}
+
+.old-price{
+text-decoration:line-through;
+color:#888;
+}
+
+.promo-price{
+color:#b026ff;
+font-size:24px;
+margin-top:5px;
+}
+
+/* SELEÇÃO X-PLAYSTOR */
+
+.selection-box{
+background:#11111f;
+padding:25px;
+border-radius:20px;
+border:1px solid #b026ff;
+}
+
+.selection-box h3{
+margin-bottom:15px;
+font-size:24px;
 color:#b026ff;
 }
 
-/* BOTÕES */
-
-button{
-background:#b026ff;
-color:white;
-padding:12px 18px;
-border:none;
-border-radius:10px;
-cursor:pointer;
-margin:15px;
+.selection-box p{
+line-height:1.8;
+color:#d7d7d7;
+margin-bottom:20px;
 }
 
-button:hover{
-background:#7a00ff;
+.selection-box ul{
+padding-left:20px;
+}
+
+.selection-box li{
+margin-bottom:10px;
+}
+
+/* NOTÍCIAS */
+
+.news-grid{
+display:grid;
+grid-template-columns:
+repeat(auto-fill,minmax(280px,1fr));
+gap:20px;
+}
+
+.news-card{
+background:#11111f;
+padding:20px;
+border-radius:15px;
+transition:.3s;
+}
+
+.news-card:hover{
+box-shadow:0 0 25px rgba(176,38,255,.4);
+}
+
+.news-card h3{
+margin-bottom:12px;
+}
+
+.news-card p{
+color:#ccc;
+line-height:1.6;
 }
 
 /* RIGHTBAR */
 
 .rightbar{
-width:250px;
+width:320px;
+padding:25px;
 background:#090914;
-padding:20px;
-border-left:1px solid #1d1d35;
+border-left:1px solid #1a1a2b;
 }
 
-.rightbar h2{
+/* XCOINS */
+
+.xcoins-box{
+background:linear-gradient(
+135deg,
+#5b00ff,
+#b026ff
+);
+padding:20px;
+border-radius:15px;
+margin-bottom:20px;
+text-align:center;
+}
+
+.coin-value{
+font-size:38px;
+font-weight:bold;
+margin-top:10px;
+}
+
+/* OFERTA */
+
+.offer-box{
+background:#11111f;
+padding:15px;
+border-radius:15px;
+margin-bottom:20px;
+}
+
+.offer-box img{
+width:100%;
+border-radius:12px;
+margin:10px 0;
+}
+
+.offer-box h2{
+color:#b026ff;
+font-size:38px;
+}
+
+.offer-box p{
+font-size:22px;
+font-weight:bold;
+}
+
+/* AMIGOS */
+
+.friends-box{
+background:#11111f;
+padding:15px;
+border-radius:15px;
 margin-bottom:20px;
 }
 
 .friend{
-background:#11111f;
+background:#1a1a2b;
 padding:12px;
 border-radius:10px;
-margin-bottom:10px;
-transition:.3s;
+margin-top:10px;
+display:flex;
+align-items:center;
+gap:10px;
 }
 
-.friend:hover{
-background:#1a1a30;
+.status-online{
+color:#00ff66;
+font-size:18px;
+}
+
+.status-away{
+color:#ffd500;
+font-size:18px;
+}
+
+.status-offline{
+color:#ff3b3b;
+font-size:18px;
+}
+
+/* PASS */
+
+.pass-banner{
+padding:20px;
+border-radius:15px;
+background:linear-gradient(
+135deg,
+#5b00ff,
+#b026ff
+);
+text-align:center;
+}
+
+.pass-banner h2{
+margin-bottom:10px;
+}
+
+.pass-banner p{
+margin-bottom:15px;
+}
+
+.pass-banner button{
+padding:12px 20px;
+border:none;
+border-radius:10px;
+font-weight:bold;
+cursor:pointer;
 }
 
 /* FOOTER */
 
-footer{
+.footer{
 margin-top:40px;
-padding:25px;
-background:#11111f;
-border-radius:15px;
-text-align:center;
-}
-
-footer h2{
-color:#b026ff;
-margin-bottom:10px;
-}
-
-footer p{
-color:#aaa;
-margin-top:5px;
-}
-
-/* SCROLL */
-
-::-webkit-scrollbar{
-width:10px;
-}
-
-::-webkit-scrollbar-track{
+padding:30px;
 background:#090914;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-top:1px solid #1a1a2b;
 }
 
-::-webkit-scrollbar-thumb{
-background:#b026ff;
-border-radius:20px;
+.footer-links{
+display:flex;
+gap:20px;
+}
+
+.footer-links a{
+text-decoration:none;
+color:#b026ff;
 }
 
 /* RESPONSIVO */
@@ -341,57 +584,42 @@ display:none;
 width:100%;
 }
 
-.topbar{
-flex-direction:column;
-align-items:flex-start;
-gap:15px;
+.hero h1{
+font-size:60px;
 }
 
-.overlay h1{
-font-size:45px;
+.hero h2{
+font-size:28px;
 }
 
 }
 
 @media(max-width:600px){
 
-.cards{
-grid-template-columns:1fr;
+.hero{
+height:350px;
 }
 
-.overlay{
-padding:25px;
+.hero-overlay{
+padding:30px;
 }
 
-.overlay h1{
-font-size:35px;
+.hero h1{
+font-size:40px;
 }
 
-}
-/* STATUS DOS AMIGOS */
-
-.friend{
-background:#11111f;
-padding:12px 15px;
-border-radius:10px;
-margin-bottom:10px;
-font-size:16px;
-display:flex;
-align-items:center;
-gap:10px;
+.hero h2{
+font-size:22px;
 }
 
-.status-online{
-color:#00ff66;
-font-size:18px;
+.hero-buttons{
+flex-wrap:wrap;
 }
 
-.status-away{
-color:#ffd500;
-font-size:18px;
+.footer{
+flex-direction:column;
+gap:20px;
+text-align:center;
 }
 
-.status-offline{
-color:#ff3b3b;
-font-size:18px;
 }
