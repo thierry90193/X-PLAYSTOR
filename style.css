@@ -797,3 +797,10 @@ font-size:12px;
 font-weight:bold;
 color:white;
 }
+.rating{
+color:#ffd700;
+font-size:14px;
+margin-top:5px;
+margin-bottom:8px;
+letter-spacing:2px;
+}
