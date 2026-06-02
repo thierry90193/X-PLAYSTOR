@@ -1,197 +1,86 @@
-function showPage(pageId){
+// X-PLAYSTOR
 
-const pages =
-document.querySelectorAll(".page");
+console.log("X-PLAYSTOR ONLINE 🚀");
 
-pages.forEach(page=>{
-page.style.display="none";
-});
+// BUSCA
 
-const selected =
-document.getElementById(pageId);
+const search = document.querySelector(".search");
 
-if(selected){
-selected.style.display="block";
-}
+if(search){
 
-}
+search.addEventListener("keyup", () => {
 
-document.addEventListener(
-"DOMContentLoaded",
-()=>{
+const texto = search.value.toLowerCase();
 
-const home =
-document.getElementById("home");
+const jogos = document.querySelectorAll(".game-card");
 
-if(home){
-home.style.display="block";
-}
+jogos.forEach(jogo => {
 
-}
-);const searchInput =
-document.querySelector(".search");
+const nome = jogo.innerText.toLowerCase();
 
-if(searchInput){
+if(nome.includes(texto)){
 
-searchInput.addEventListener(
-"keyup",
-function(){
+jogo.style.display = "block";
 
-let value =
-this.value.toLowerCase();
-
-let games =
-document.querySelectorAll(
-".game-card"
-);
-
-games.forEach(game=>{
-
-let title =
-game.querySelector("h3")
-.innerText
-.toLowerCase();
-
-if(title.includes(value)){
-game.style.display="block";
 }else{
-game.style.display="none";
+
+jogo.style.display = "none";
+
 }
 
 });
 
-}
-);
-
-}const favoriteButtons =
-document.querySelectorAll(
-".favorite-btn"
-);
-
-favoriteButtons.forEach(btn=>{
-
-btn.addEventListener(
-"click",
-function(){
-
-this.classList.toggle(
-"active-favorite"
-);
-
-if(
-this.innerHTML === "🤍"
-){
-this.innerHTML = "❤️";
-}else{
-this.innerHTML = "🤍";
-}
+});
 
 }
+
+// FAVORITAR
+
+const favoritos = document.querySelectorAll(".wishlist-btn");
+
+favoritos.forEach(btn => {
+
+btn.addEventListener("click", () => {
+
+btn.innerHTML = "❤️ ADICIONADO";
+
+btn.style.background = "#ff4d7a";
+
+});
+
+});
+
+// BOTÕES COMPRAR
+
+const comprar = document.querySelectorAll(
+".buy-btn,.offer-btn"
 );
 
-});let cartCount = 0;
+comprar.forEach(botao => {
 
-const cartNumber =
-document.getElementById(
-"cart-count"
-);
-
-const buyButtons =
-document.querySelectorAll(
-".buy-btn"
-);
-
-buyButtons.forEach(btn=>{
-
-btn.addEventListener(
-"click",
-()=>{
-
-cartCount++;
-
-if(cartNumber){
-cartNumber.innerText =
-cartCount;
-}
+botao.addEventListener("click", () => {
 
 alert(
-"Jogo adicionado ao carrinho!"
+"🎮 Jogo adicionado ao carrinho!"
 );
 
-}
+});
+
+});
+
+// BIBLIOTECA
+
+const biblioteca =
+document.querySelectorAll(".library-btn");
+
+biblioteca.forEach(botao => {
+
+botao.addEventListener("click", () => {
+
+alert(
+"🚀 Iniciando jogo..."
 );
 
-});let xcoins = 1250;
+});
 
-function addCoins(valor){
-
-xcoins += valor;
-
-document.getElementById(
-"xcoins"
-).innerText =
-xcoins.toLocaleString(
-"pt-BR"
-);
-
-}
-
-function removeCoins(valor){
-
-xcoins -= valor;
-
-document.getElementById(
-"xcoins"
-).innerText =
-xcoins.toLocaleString(
-"pt-BR"
-);
-
-}window.addEventListener(
-"load",
-()=>{
-
-setTimeout(()=>{
-
-console.log(
-"Equipe X-PLAYSTOR online."
-);
-
-},2000);
-
-});function startOfferTimer(){
-
-let time = 86400;
-
-setInterval(()=>{
-
-let h =
-Math.floor(time/3600);
-
-let m =
-Math.floor(
-(time%3600)/60
-);
-
-let s =
-time%60;
-
-const timer =
-document.getElementById(
-"offer-timer"
-);
-
-if(timer){
-
-timer.innerHTML =
-`${h}h ${m}m ${s}s`;
-
-}
-
-time--;
-
-},1000);
-
-}
-
-startOfferTimer();
+});
