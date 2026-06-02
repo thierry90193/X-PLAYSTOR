@@ -301,3 +301,27 @@ mensagens.length
 notificar(msg);
 
 },60000);
+window.addEventListener("load", () => {
+
+const perfil =
+document.querySelector(".profile h4");
+
+const avatar =
+document.querySelector(".avatar");
+
+const status =
+document.querySelector(".profile span");
+
+if(perfil){
+perfil.innerText = "thierry90193";
+}
+
+if(avatar){
+avatar.innerText = "T9";
+}
+
+if(status){
+status.innerText = "👑 FUNDADORA ONLINE";
+}
+
+});
