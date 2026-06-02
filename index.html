@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>X-PLAYSTOR</title>
 
 <link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
 
 <div class="app">
@@ -16,47 +20,36 @@
 
 <aside class="sidebar">
 
-<div class="logo">
+<div class="logo-area">
 
-<div class="x-logo">
-
-<div class="x-controller">
+<div class="logo-icon">
 🎮
-</div>
-
-<div class="x-text">
-X
-</div>
-
 </div>
 
 <h1>X-PLAYSTOR</h1>
 
 <p>
-JOGOS. DIVERSÃO. SEM LIMITES.
+Jogos. Diversão. Sem Limites.
 </p>
 
 </div>
+
 <nav class="menu">
 
 <a href="#" class="active">
-🏠 Destaques
+🏠 Início
 </a>
 
 <a href="#">
-🔥 Novos Lançamentos
+🔥 Destaques
 </a>
 
 <a href="#">
-🏆 Mais Vendidos
+🚀 Lançamentos
 </a>
 
 <a href="#">
-💎 Ofertas
-</a>
-
-<a href="#">
-📅 Próximos Lançamentos
+💎 Promoções
 </a>
 
 <a href="#">
@@ -64,23 +57,27 @@ JOGOS. DIVERSÃO. SEM LIMITES.
 </a>
 
 <a href="#">
+🏆 Mais Vendidos
+</a>
+
+<a href="#">
 ⭐ X-PLAY PASS
 </a>
 
 <a href="#">
-🏅 Conquistas
+👥 Comunidade
 </a>
 
 </nav>
 
-<div class="library">
+<div class="library-mini">
 
 <h3>
-Sua Biblioteca
+📚 Biblioteca
 </h3>
 
 <a href="#">
-🎮 Seus Jogos
+🎮 Meus Jogos
 </a>
 
 <a href="#">
@@ -88,24 +85,8 @@ Sua Biblioteca
 </a>
 
 <a href="#">
-⬇️ Downloads
+⬇ Downloads
 </a>
-
-</div>
-
-<div class="pass-card">
-
-<h2>
-⭐ X-PLAY PASS
-</h2>
-
-<p>
-Acesso ilimitado a centenas de jogos.
-</p>
-
-<button>
-SAIBA MAIS
-</button>
 
 </div>
 
@@ -119,23 +100,19 @@ SAIBA MAIS
 
 <input
 type="text"
+placeholder="Buscar jogos..."
 class="search"
-placeholder="Buscar jogos, DLCs e amigos..."
 >
 
 <div class="top-actions">
 
-<div class="notification">
+<button>
 🔔
-<div class="cart">
+</button>
 
+<button>
 🛒
-
-<span class="cart-count">
-0
-</span>
-
-</div>
+</button>
 
 <div class="profile">
 
@@ -167,7 +144,7 @@ ONLINE
 
 <div class="hero-overlay">
 
-<div class="tag">
+<div class="hero-tag">
 LANÇAMENTO
 </div>
 
@@ -180,11 +157,14 @@ RISE OF HEROES
 </h2>
 
 <p>
-O destino do mundo está em suas mãos.
+Explore um mundo épico repleto de aventuras,
+batalhas e segredos.
 </p>
 
-<div class="price">
+<div class="hero-price">
+
 R$ 149,90
+
 </div>
 
 <div class="hero-buttons">
@@ -193,12 +173,8 @@ R$ 149,90
 COMPRAR AGORA
 </button>
 
-<button class="wish-btn">
-❤
-</button>
-
-<button class="wish-btn">
-+ LISTA DE DESEJOS
+<button class="wishlist-btn">
+❤ FAVORITAR
 </button>
 
 </div>
@@ -207,19 +183,10 @@ COMPRAR AGORA
 
 </section>
 
-<!-- DESTAQUES -->
-
-<section class="section">
-
 <!-- CATEGORIAS -->
 
 <section class="section">
 
-<div class="section-header">
-
-<h2>
-🎮 Categorias
-</h2>
 <div class="section-header">
 
 <h2>
@@ -234,25 +201,49 @@ Ver Todas
 
 <div class="categories-grid">
 
-<div class="category-card">⚔️ Ação</div>
+<div class="category-card">
+⚔️ Ação
+</div>
 
-<div class="category-card">🏹 RPG</div>
+<div class="category-card">
+🏹 RPG
+</div>
 
-<div class="category-card">👻 Terror</div>
+<div class="category-card">
+👻 Terror
+</div>
 
-<div class="category-card">🏎️ Corrida</div>
+<div class="category-card">
+🏎️ Corrida
+</div>
 
-<div class="category-card">🌎 Mundo Aberto</div>
+<div class="category-card">
+🌎 Mundo Aberto
+</div>
 
-<div class="category-card">👥 Multiplayer</div>
+<div class="category-card">
+🚀 Ficção Científica
+</div>
 
-<div class="category-card">🚀 Ficção Científica</div>
+<div class="category-card">
+👥 Multiplayer
+</div>
 
-<div class="category-card">🧩 Puzzle</div>
+<div class="category-card">
+🧩 Puzzle
+</div>
 
 </div>
 
 </section>
+
+<!-- DESTAQUES -->
+
+<section class="section">
+
+<div class="section-header">
+
+<h2>
 🔥 Destaques
 </h2>
 
@@ -274,13 +265,10 @@ Ver Todos
 Cyber Runner
 </h3>
 
-<div class="rating">
-⭐⭐⭐⭐⭐
-</div>
-
 <p>
 R$ 199,90
 </p>
+
 </div>
 
 </div>
@@ -296,7 +284,7 @@ Starfield X
 </h3>
 
 <p>
-R$ 199,90
+R$ 179,90
 </p>
 
 </div>
@@ -314,25 +302,7 @@ Red Dead Legacy
 </h3>
 
 <p>
-R$ 179,90
-</p>
-
-</div>
-
-</div>
-
-<div class="game-card">
-
-<img src="https://picsum.photos/400/220?4">
-
-<div class="game-info">
-
-<h3>
-Magic Castle
-</h3>
-
-<p>
-R$ 249,90
+R$ 159,90
 </p>
 
 </div>
@@ -341,9 +311,7 @@ R$ 249,90
 
 </div>
 
-</section>
-
-<!-- LANÇAMENTOS -->
+</section><!-- LANÇAMENTOS -->
 
 <section class="section">
 
@@ -363,7 +331,7 @@ Ver Todos
 
 <div class="game-card">
 
-<img src="https://picsum.photos/400/220?5">
+<img src="https://picsum.photos/400/220?4">
 
 <div class="game-info">
 
@@ -381,7 +349,7 @@ R$ 129,90
 
 <div class="game-card">
 
-<img src="https://picsum.photos/400/220?6">
+<img src="https://picsum.photos/400/220?5">
 
 <div class="game-info">
 
@@ -399,7 +367,7 @@ R$ 99,90
 
 <div class="game-card">
 
-<img src="https://picsum.photos/400/220?7">
+<img src="https://picsum.photos/400/220?6">
 
 <div class="game-info">
 
@@ -408,25 +376,7 @@ Project Awaken
 </h3>
 
 <p>
-R$ 159,90
-</p>
-
-</div>
-
-</div>
-
-<div class="game-card">
-
-<img src="https://picsum.photos/400/220?8">
-
-<div class="game-info">
-
-<h3>
-Frostborn
-</h3>
-
-<p>
-R$ 109,90
+R$ 149,90
 </p>
 
 </div>
@@ -435,7 +385,9 @@ R$ 109,90
 
 </div>
 
-</section><!-- PROMOÇÕES -->
+</section>
+
+<!-- PROMOÇÕES -->
 
 <section class="section">
 
@@ -459,7 +411,9 @@ Ver Todas
 
 <div class="game-info">
 
-<h3>Cyber Runner</h3>
+<h3>
+Cyber Runner
+</h3>
 
 <p class="old-price">
 De R$ 89,90
@@ -479,7 +433,9 @@ R$ 39,90
 
 <div class="game-info">
 
-<h3>Galaxy Wars</h3>
+<h3>
+Galaxy Wars
+</h3>
 
 <p class="old-price">
 De R$ 149,90
@@ -499,7 +455,9 @@ R$ 69,90
 
 <div class="game-info">
 
-<h3>Shadow Legacy</h3>
+<h3>
+Shadow Legacy
+</h3>
 
 <p class="old-price">
 De R$ 119,90
@@ -507,26 +465,6 @@ De R$ 119,90
 
 <h4 class="promo-price">
 R$ 59,90
-</h4>
-
-</div>
-
-</div>
-
-<div class="game-card">
-
-<img src="https://picsum.photos/400/220?14">
-
-<div class="game-info">
-
-<h3>Dark Horizon</h3>
-
-<p class="old-price">
-De R$ 99,90
-</p>
-
-<h4 class="promo-price">
-R$ 49,90
 </h4>
 
 </div>
@@ -556,20 +494,17 @@ Seu jogo pode entrar na X-PLAYSTOR
 </h3>
 
 <p>
-
-Seu jogo passa por uma análise antes de entrar no catálogo da X-PLAYSTOR.
-
-Nossa equipe avalia critérios como qualidade, desempenho, estabilidade, criatividade e experiência do jogador.
-
-Apenas os jogos aprovados são adicionados à plataforma, garantindo um catálogo selecionado e confiável para toda a comunidade.
-
+Nossa equipe analisa qualidade,
+desempenho, estabilidade,
+criatividade e experiência
+antes de aprovar um jogo.
 </p>
 
 <ul>
 
-<li>✔ Qualidade visual</li>
+<li>✔ Qualidade Visual</li>
 
-<li>✔ Boa performance</li>
+<li>✔ Performance</li>
 
 <li>✔ Jogabilidade</li>
 
@@ -577,7 +512,7 @@ Apenas os jogos aprovados são adicionados à plataforma, garantindo um catálog
 
 <li>✔ Criatividade</li>
 
-<li>✔ Experiência divertida</li>
+<li>✔ Experiência Divertida</li>
 
 </ul>
 
@@ -592,7 +527,7 @@ Apenas os jogos aprovados são adicionados à plataforma, garantindo um catálog
 <div class="section-header">
 
 <h2>
-📰 Notícias X-PLAYSTOR
+📰 Notícias
 </h2>
 
 </div>
@@ -602,23 +537,12 @@ Apenas os jogos aprovados são adicionados à plataforma, garantindo um catálog
 <div class="news-card">
 
 <h3>
-Equipe X-PLAYSTOR recebe novos jogos
+Nova atualização chegando
 </h3>
 
 <p>
-Desenvolvedores independentes agora podem enviar seus jogos para avaliação da equipe.
-</p>
-
-</div>
-
-<div class="news-card">
-
-<h3>
-Atualização da plataforma
-</h3>
-
-<p>
-Novas melhorias visuais e recursos estão chegando para a comunidade.
+A interface da X-PLAYSTOR
+receberá melhorias visuais.
 </p>
 
 </div>
@@ -630,8 +554,96 @@ Programa para criadores
 </h3>
 
 <p>
-Em breve criadores poderão divulgar projetos diretamente dentro da plataforma.
+Em breve desenvolvedores
+poderão publicar seus jogos.
 </p>
+
+</div>
+
+<div class="news-card">
+
+<h3>
+Comunidade crescendo
+</h3>
+
+<p>
+Milhares de novos jogadores
+estão chegando à plataforma.
+</p>
+
+</div>
+
+</div>
+
+</section><!-- MINHA BIBLIOTECA -->
+
+<section class="section">
+
+<div class="section-header">
+
+<h2>
+📚 Minha Biblioteca
+</h2>
+
+<a href="#">
+Ver Tudo
+</a>
+
+</div>
+
+<div class="games-grid">
+
+<div class="game-card">
+
+<img src="https://picsum.photos/400/220?21">
+
+<div class="game-info">
+
+<h3>
+Minecraft
+</h3>
+
+<button class="library-btn">
+▶ JOGAR
+</button>
+
+</div>
+
+</div>
+
+<div class="game-card">
+
+<img src="https://picsum.photos/400/220?22">
+
+<div class="game-info">
+
+<h3>
+GTA V
+</h3>
+
+<button class="library-btn">
+▶ JOGAR
+</button>
+
+</div>
+
+</div>
+
+<div class="game-card">
+
+<img src="https://picsum.photos/400/220?23">
+
+<div class="game-info">
+
+<h3>
+Cyberpunk 2077
+</h3>
+
+<button class="library-btn">
+⬇ INSTALAR
+</button>
+
+</div>
 
 </div>
 
@@ -641,7 +653,7 @@ Em breve criadores poderão divulgar projetos diretamente dentro da plataforma.
 
 </main>
 
-<!-- BARRA DIREITA -->
+<!-- SIDEBAR DIREITA -->
 
 <aside class="rightbar">
 
@@ -655,15 +667,19 @@ Em breve criadores poderão divulgar projetos diretamente dentro da plataforma.
 1.250
 </div>
 
+<p>
+Moeda oficial da plataforma.
+</p>
+
 </div>
 
 <div class="offer-box">
 
 <h3>
-🔥 OFERTA DO DIA
+🔥 Oferta do Dia
 </h3>
 
-<img src="https://picsum.photos/350/250?gaming">
+<img src="https://picsum.photos/350/220?gaming">
 
 <h4>
 Cyber Runner
@@ -678,47 +694,39 @@ R$ 39,90
 </p>
 
 <button class="offer-btn">
-
 COMPRAR AGORA
-
 </button>
 
 </div>
 
-
+<div class="friends-box">
 
 <h3>
 👥 Amigos Online
 </h3>
 
 <div class="friend">
-<span class="status-online">●</span>
-João
+🟢 João
 </div>
 
 <div class="friend">
-<span class="status-online">●</span>
-Maria
+🟢 Maria
 </div>
 
 <div class="friend">
-<span class="status-away">●</span>
-Lucas
+🟢 Ana
 </div>
 
 <div class="friend">
-<span class="status-offline">●</span>
-Pedro
+🟡 Lucas
 </div>
 
 <div class="friend">
-<span class="status-online">●</span>
-Ana
+⚫ Pedro
 </div>
 
 <div class="friend">
-<span class="status-online">●</span>
-NightWolf
+🟢 NightWolf
 </div>
 
 </div>
@@ -730,8 +738,8 @@ NightWolf
 </h2>
 
 <p>
-Jogue mais.
-Pague menos.
+Acesso a centenas de jogos
+por uma única assinatura.
 </p>
 
 <button>
@@ -743,75 +751,15 @@ ASSINAR AGORA
 </aside>
 
 </div>
-<section class="section">
 
-<div class="section-header">
+<!-- FOOTER -->
 
-<h2>
-📚 Minha Biblioteca
-</h2>
-
-</div>
-
-<div class="games-grid">
-
-<div class="game-card">
-
-<img src="https://picsum.photos/400/220?51">
-
-<div class="game-info">
-
-<h3>Minecraft</h3>
-
-<button class="library-btn">
-▶ JOGAR
-</button>
-
-</div>
-
-</div>
-
-<div class="game-card">
-
-<img src="https://picsum.photos/400/220?52">
-
-<div class="game-info">
-
-<h3>GTA V</h3>
-
-<button class="library-btn">
-▶ JOGAR
-</button>
-
-</div>
-
-</div>
-
-<div class="game-card">
-
-<img src="https://picsum.photos/400/220?53">
-
-<div class="game-info">
-
-<h3>Cyberpunk</h3>
-
-<button class="library-btn">
-⬇ INSTALAR
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
 <footer class="footer">
 
-<div>
+<div class="footer-logo">
 
 <h2>
-X-PLAYSTOR
+🎮 X-PLAYSTOR
 </h2>
 
 <p>
@@ -838,9 +786,14 @@ Termos
 Comunidade
 </a>
 
+<a href="#">
+Desenvolvedores
+</a>
+
 </div>
 
 </footer>
 
 </body>
+
 </html>
