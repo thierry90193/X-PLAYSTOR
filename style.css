@@ -1,28 +1,15 @@
-/* RESET */
-
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
+font-family:Arial,sans-serif;
 }
 
 body{
-background:#0f1117;
+background:#0f0f18;
 color:white;
+overflow-x:hidden;
 }
-
-a{
-text-decoration:none;
-color:white;
-}
-
-img{
-display:block;
-width:100%;
-}
-
-/* APP */
 
 .app{
 display:flex;
@@ -32,82 +19,87 @@ min-height:100vh;
 /* SIDEBAR */
 
 .sidebar{
-width:260px;
-background:#151823;
+width:280px;
+background:#171726;
 padding:25px;
-border-right:1px solid #242838;
+display:flex;
+flex-direction:column;
+gap:25px;
+border-right:1px solid #2a2a40;
 }
 
-.logo-area{
-text-align:center;
-margin-bottom:30px;
-}
-
-.logo-icon{
-font-size:60px;
-margin-bottom:10px;
-}
-
-.logo-area h1{
+.logo h1{
 font-size:28px;
-color:#9b59ff;
-margin-bottom:8px;
+color:#9d5cff;
 }
 
-.logo-area p{
-font-size:13px;
-color:#aaa;
+.logo p{
+font-size:12px;
+opacity:.7;
+margin-top:5px;
 }
-
-/* MENU */
 
 .menu{
 display:flex;
 flex-direction:column;
 gap:10px;
-margin-bottom:30px;
 }
 
 .menu a{
+text-decoration:none;
+color:white;
 padding:12px;
-background:#1b1f2c;
 border-radius:10px;
-transition:0.3s;
+transition:.3s;
 }
 
 .menu a:hover{
-background:#292f42;
+background:#9d5cff;
 }
 
 .menu .active{
-background:#8a4fff;
+background:#9d5cff;
 }
 
-/* MINI BIBLIOTECA */
-
-.library-mini{
-background:#1b1f2c;
-padding:15px;
-border-radius:12px;
+.library{
+display:flex;
+flex-direction:column;
+gap:10px;
 }
 
-.library-mini h3{
-margin-bottom:12px;
+.library a{
+text-decoration:none;
+color:#cfcfcf;
 }
 
-.library-mini a{
-display:block;
-margin-bottom:8px;
-color:#ccc;
-}/* CONTENT */
+.pass-card{
+background:#9d5cff;
+padding:20px;
+border-radius:15px;
+}
+
+.pass-card button{
+margin-top:10px;
+width:100%;
+padding:10px;
+border:none;
+border-radius:10px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.socials{
+display:flex;
+gap:10px;
+font-size:22px;
+}
+
+/* CONTEÚDO */
 
 .content{
 flex:1;
 padding:25px;
-overflow-y:auto;
-}
-
-/* TOPBAR */
+}/* TOPO */
 
 .topbar{
 display:flex;
@@ -122,13 +114,9 @@ padding:14px;
 border:none;
 outline:none;
 border-radius:12px;
-background:#1b1f2c;
+background:#1b1b2d;
 color:white;
 font-size:15px;
-}
-
-.search::placeholder{
-color:#888;
 }
 
 .top-actions{
@@ -137,37 +125,38 @@ align-items:center;
 gap:15px;
 }
 
-.top-actions button{
+.icon-btn{
 width:45px;
 height:45px;
 border:none;
 border-radius:12px;
-background:#1b1f2c;
+background:#1b1b2d;
 color:white;
 cursor:pointer;
 font-size:18px;
 }
 
-.top-actions button:hover{
-background:#2a3044;
+.icon-btn:hover{
+background:#9d5cff;
 }
-
-/* PROFILE */
 
 .profile{
 display:flex;
 align-items:center;
-gap:10px;
+gap:12px;
+background:#1b1b2d;
+padding:10px 15px;
+border-radius:12px;
 }
 
 .avatar{
 width:45px;
 height:45px;
 border-radius:50%;
-background:#8a4fff;
+background:#9d5cff;
 display:flex;
-justify-content:center;
 align-items:center;
+justify-content:center;
 font-weight:bold;
 }
 
@@ -177,103 +166,101 @@ font-size:14px;
 
 .profile span{
 font-size:12px;
-color:#6cff6c;
+opacity:.8;
 }
 
 /* HERO */
 
 .hero{
-height:420px;
+height:320px;
 border-radius:20px;
 overflow:hidden;
 position:relative;
 margin-bottom:30px;
 
-background-image:
+background:
 linear-gradient(
-to right,
-rgba(0,0,0,.85),
-rgba(0,0,0,.2)
+rgba(0,0,0,.4),
+rgba(0,0,0,.7)
 ),
-url("https://picsum.photos/1400/700?gaming");
+
+url("https://picsum.photos/1200/500?gaming");
 
 background-size:cover;
 background-position:center;
 }
 
 .hero-overlay{
-padding:50px;
-max-width:600px;
+padding:40px;
+height:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
 }
 
 .hero-tag{
-display:inline-block;
-padding:8px 16px;
-background:#8a4fff;
-border-radius:30px;
+background:#9d5cff;
+width:max-content;
+padding:8px 15px;
+border-radius:20px;
 font-size:12px;
-margin-bottom:20px;
+margin-bottom:15px;
 }
 
 .hero h1{
-font-size:60px;
-margin-bottom:5px;
+font-size:52px;
+font-weight:bold;
 }
 
 .hero h2{
-font-size:30px;
-color:#d7c3ff;
-margin-bottom:20px;
+font-size:26px;
+margin-bottom:10px;
+color:#d6c2ff;
 }
 
 .hero p{
-font-size:16px;
-line-height:1.6;
-color:#ccc;
-margin-bottom:25px;
+font-size:15px;
+opacity:.9;
+margin-bottom:15px;
 }
 
 .hero-price{
-font-size:32px;
+font-size:28px;
 font-weight:bold;
-margin-bottom:25px;
-color:#66ff99;
+margin-bottom:20px;
 }
 
 .hero-buttons{
 display:flex;
-gap:15px;
+gap:10px;
 }
 
 .buy-btn{
-padding:14px 28px;
+padding:12px 25px;
 border:none;
 border-radius:12px;
-background:#8a4fff;
+background:#9d5cff;
 color:white;
 font-weight:bold;
 cursor:pointer;
 }
 
-.buy-btn:hover{
-transform:scale(1.05);
-}
-
 .wishlist-btn{
-padding:14px 28px;
+padding:12px 18px;
 border:none;
 border-radius:12px;
-background:#22283a;
+background:#232338;
 color:white;
 cursor:pointer;
 }
 
+.buy-btn:hover,
 .wishlist-btn:hover{
-background:#31384f;
-}/* SECTIONS */
+transform:translateY(-2px);
+}/* SEÇÕES */
 
 .section{
-margin-bottom:40px;
+margin-bottom:35px;
 }
 
 .section-header{
@@ -288,65 +275,41 @@ font-size:24px;
 }
 
 .section-header a{
-color:#9b59ff;
+color:#9d5cff;
+text-decoration:none;
 font-weight:bold;
 }
 
-.section-header a:hover{
-color:white;
-}
-
-/* CATEGORIES */
-
-.categories-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:15px;
-margin-bottom:20px;
-}
-
-.category-card{
-background:#1b1f2c;
-padding:20px;
-border-radius:15px;
-text-align:center;
-font-weight:bold;
-cursor:pointer;
-transition:.3s;
-}
-
-.category-card:hover{
-background:#8a4fff;
-transform:translateY(-5px);
-}
-
-/* GAMES GRID */
+/* GRID DOS JOGOS */
 
 .games-grid{
 display:grid;
-grid-template-columns:repeat(3,1fr);
+grid-template-columns:
+repeat(auto-fill,minmax(240px,1fr));
 gap:20px;
 }
 
-/* GAME CARD */
+/* CARD */
 
 .game-card{
-background:#1b1f2c;
+background:#171726;
 border-radius:18px;
 overflow:hidden;
 transition:.3s;
-cursor:pointer;
+border:1px solid #24243a;
 }
 
 .game-card:hover{
-transform:translateY(-8px);
-box-shadow:0 15px 30px rgba(0,0,0,.4);
+transform:translateY(-5px);
+box-shadow:
+0 0 20px rgba(157,92,255,.3);
 }
 
 .game-card img{
 width:100%;
-height:220px;
+height:160px;
 object-fit:cover;
+display:block;
 }
 
 .game-info{
@@ -359,139 +322,80 @@ font-size:18px;
 }
 
 .game-info p{
-color:#bfbfbf;
-font-size:14px;
-}
-
-.game-info h4{
-margin-top:10px;
-}
-
-/* PROMOÇÕES */
-
-.old-price{
-text-decoration:line-through;
-color:#888;
-}
-
-.promo-price{
-color:#66ff99;
-font-size:22px;
-font-weight:bold;
-}
-
-/* BOTÃO BIBLIOTECA */
-
-.library-btn{
-margin-top:12px;
-padding:10px 18px;
-border:none;
-border-radius:10px;
-background:#8a4fff;
-color:white;
-font-weight:bold;
-cursor:pointer;
-width:100%;
-}
-
-.library-btn:hover{
-background:#9f6dff;
-}
-
-/* SELECTION BOX */
-
-.selection-box{
-background:#1b1f2c;
-padding:25px;
-border-radius:18px;
-}
-
-.selection-box h3{
-margin-bottom:15px;
-}
-
-.selection-box p{
-line-height:1.8;
-color:#ccc;
-margin-bottom:15px;
-}
-
-.selection-box ul{
-padding-left:20px;
-}
-
-.selection-box li{
-margin-bottom:10px;
-}/* NEWS */
-
-.news-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:20px;
-}
-
-.news-card{
-background:#1b1f2c;
-padding:20px;
-border-radius:18px;
-transition:.3s;
-}
-
-.news-card:hover{
-transform:translateY(-5px);
-}
-
-.news-card h3{
+color:#cfcfcf;
 margin-bottom:12px;
 }
 
-.news-card p{
-color:#bdbdbd;
-line-height:1.6;
+.game-info button{
+width:100%;
+padding:10px;
+border:none;
+border-radius:10px;
+background:#9d5cff;
+color:white;
+cursor:pointer;
+font-weight:bold;
 }
 
-/* RIGHTBAR */
+.game-info button:hover{
+opacity:.9;
+}
+
+/* TAG NOVO */
+
+.new-tag{
+display:inline-block;
+background:#9d5cff;
+padding:5px 10px;
+border-radius:20px;
+font-size:11px;
+margin-bottom:10px;
+font-weight:bold;
+}/* BARRA DIREITA */
 
 .rightbar{
-width:300px;
-background:#151823;
+width:320px;
 padding:25px;
-border-left:1px solid #242838;
+background:#131320;
+border-left:1px solid #252540;
+display:flex;
+flex-direction:column;
+gap:20px;
 }
 
-/* XCOINS */
+/* X-COINS */
 
 .xcoins-box{
-background:#1b1f2c;
+background:#1b1b2d;
 padding:20px;
 border-radius:18px;
-margin-bottom:20px;
 text-align:center;
 }
 
 .coin-value{
-font-size:36px;
+font-size:32px;
 font-weight:bold;
-color:#ffd54a;
-margin:15px 0;
+color:#ffd700;
+margin-top:10px;
 }
 
-/* OFFER */
+/* OFERTA */
 
 .offer-box{
-background:#1b1f2c;
-padding:15px;
+background:#1b1b2d;
 border-radius:18px;
-margin-bottom:20px;
+overflow:hidden;
+padding:15px;
 }
 
 .offer-box img{
+width:100%;
 border-radius:12px;
-margin:12px 0;
+margin:10px 0;
 }
 
 .offer-box h2{
-color:#66ff99;
+color:#00ff99;
 margin:10px 0;
 }
 
@@ -500,77 +404,73 @@ width:100%;
 padding:12px;
 border:none;
 border-radius:10px;
-background:#8a4fff;
+background:#9d5cff;
 color:white;
 font-weight:bold;
 cursor:pointer;
-margin-top:10px;
 }
 
-.offer-btn:hover{
-background:#9f6dff;
-}
-
-/* FRIENDS */
+/* AMIGOS */
 
 .friends-box{
-background:#1b1f2c;
+background:#1b1b2d;
 padding:20px;
 border-radius:18px;
-margin-bottom:20px;
-}
-
-.friends-box h3{
-margin-bottom:15px;
 }
 
 .friend{
-padding:10px;
-border-bottom:1px solid #2b3145;
+padding:10px 0;
+border-bottom:1px solid #2c2c45;
 }
 
 .friend:last-child{
 border-bottom:none;
 }
 
-/* PASS */
+/* X-PLAY PASS */
 
 .pass-banner{
-background:linear-gradient(
+background:
+linear-gradient(
 135deg,
-#8a4fff,
-#5f2bdb
+#9d5cff,
+#6c2fff
 );
-padding:25px;
+
+padding:20px;
 border-radius:18px;
 text-align:center;
 }
 
-.pass-banner h2{
-margin-bottom:15px;
-}
-
 .pass-banner p{
-margin-bottom:15px;
-line-height:1.6;
+margin:10px 0;
 }
 
 .pass-banner button{
-padding:12px 20px;
+width:100%;
+padding:12px;
 border:none;
 border-radius:10px;
-background:white;
-color:#5f2bdb;
 font-weight:bold;
 cursor:pointer;
 }
 
-/* FOOTER */
+/* CONTADOR CARRINHO */
+
+.cart-count{
+background:red;
+color:white;
+font-size:11px;
+padding:2px 6px;
+border-radius:50px;
+margin-left:5px;
+}/* FOOTER */
 
 .footer{
-margin-top:50px;
-padding:40px;
-background:#151823;
+margin-top:40px;
+padding:25px;
+background:#171726;
+border-top:1px solid #2a2a40;
 display:flex;
 justify-content:space-between;
 align-items:center;
@@ -578,33 +478,24 @@ flex-wrap:wrap;
 gap:20px;
 }
 
-.footer-logo h2{
-color:#9b59ff;
-margin-bottom:10px;
-}
-
-.footer-logo p{
-color:#aaa;
-}
-
 .footer-links{
 display:flex;
 gap:20px;
-flex-wrap:wrap;
 }
 
 .footer-links a{
-color:#ccc;
+text-decoration:none;
+color:#cfcfcf;
 }
 
 .footer-links a:hover{
-color:#9b59ff;
+color:#9d5cff;
 }
 
-/* SCROLLBAR */
+/* SCROLL */
 
 ::-webkit-scrollbar{
-width:8px;
+width:10px;
 }
 
 ::-webkit-scrollbar-track{
@@ -612,8 +503,43 @@ background:#111;
 }
 
 ::-webkit-scrollbar-thumb{
-background:#8a4fff;
-border-radius:10px;
+background:#9d5cff;
+border-radius:20px;
+}
+
+/* ANIMAÇÕES */
+
+.game-card,
+.offer-box,
+.pass-banner,
+.xcoins-box,
+.friends-box{
+transition:.3s;
+}
+
+.game-card:hover,
+.offer-box:hover,
+.pass-banner:hover,
+.xcoins-box:hover,
+.friends-box:hover{
+
+transform:translateY(-4px);
+
+box-shadow:
+0 0 25px
+rgba(157,92,255,.35);
+
+}
+
+/* BRILHO ROXO */
+
+.logo h1,
+.section-header h2{
+
+text-shadow:
+0 0 10px
+rgba(157,92,255,.5);
+
 }
 
 /* RESPONSIVO */
@@ -624,58 +550,16 @@ border-radius:10px;
 display:none;
 }
 
-.games-grid{
-grid-template-columns:repeat(2,1fr);
 }
 
-.categories-grid{
-grid-template-columns:repeat(2,1fr);
-}
-
-.news-grid{
-grid-template-columns:repeat(2,1fr);
-}
-
-}
-
-@media(max-width:768px){
-
-.app{
-flex-direction:column;
-}
+@media(max-width:900px){
 
 .sidebar{
-width:100%;
-border-right:none;
-border-bottom:1px solid #242838;
+display:none;
 }
 
 .content{
-padding:15px;
-}
-
-.games-grid{
-grid-template-columns:1fr;
-}
-
-.categories-grid{
-grid-template-columns:1fr;
-}
-
-.news-grid{
-grid-template-columns:1fr;
-}
-
-.hero{
-height:320px;
-}
-
-.hero h1{
-font-size:40px;
-}
-
-.hero h2{
-font-size:22px;
+width:100%;
 }
 
 .search{
@@ -685,6 +569,31 @@ width:100%;
 .topbar{
 flex-direction:column;
 gap:15px;
+}
+
+}
+
+@media(max-width:600px){
+
+.hero h1{
+font-size:32px;
+}
+
+.hero h2{
+font-size:18px;
+}
+
+.games-grid{
+grid-template-columns:1fr;
+}
+
+.hero-buttons{
+flex-direction:column;
+}
+
+.buy-btn,
+.wishlist-btn{
+width:100%;
 }
 
 }
